@@ -17,7 +17,7 @@ describe('file-utils', function () {
 
     it('#writeFileSync()', function () {
         utils.writeFileSync('test/resources/_temp_/write.txt', 'Write');
-        let str = fs.readFileSync('test/resources/_temp_/write.txt');
+        let str = utils.readFileSync('test/resources/_temp_/write.txt');
         assert.equal(str, 'Write');
     });
 
@@ -27,9 +27,18 @@ describe('file-utils', function () {
         assert.equal(objs[1].title, 'b');
     });
 
+    it('#copySync()', function () {
+        utils.copySync('test/resources/path', 'test/resources/copy');
+        let objs = utils.readJsonFilesFromPathSync('test/resources/copy/**.json');
+        assert.equal(objs[0].title, 'a');
+        assert.equal(objs[1].title, 'b');
+    });
+
     after(function () {
         fs.unlinkSync('test/resources/_temp_/write.json');
         fs.unlinkSync('test/resources/_temp_/write.txt');
+        fs.unlinkSync('test/resources/copy/a.json');
+        fs.unlinkSync('test/resources/copy/b.json');
     });
 
 });
