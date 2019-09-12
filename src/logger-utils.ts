@@ -25,8 +25,11 @@ export function createLogger(options: any = {}) {
         transports: []
     };
 
-    const customLogFormat = winston.format.printf(({level, message, label, timestamp}) => {
-        return `${timestamp} [${label}] ${level}: ${message}`;
+    const customLogFormat = winston.format.printf((info: any) => {
+        if (info.message instanceof Error) {
+            info.message = info.message.stack;
+        }
+        return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
     });
     const label = winston.format.label({label: options.label});
     const timestamp = winston.format.timestamp();
