@@ -1,48 +1,57 @@
-let Reset = "\x1b[0m";
-let Bright = "\x1b[1m";
-let Dim = "\x1b[2m";
-let Underscore = "\x1b[4m";
-let Blink = "\x1b[5m";
-let Reverse = "\x1b[7m";
-let Hidden = "\x1b[8m";
+import * as winston from 'winston';
 
-let FgBlack = "\x1b[30m";
-let FgRed = "\x1b[31m";
-let FgGreen = "\x1b[32m";
-let FgYellow = "\x1b[33m";
-let FgBlue = "\x1b[34m";
-let FgMagenta = "\x1b[35m";
-let FgCyan = "\x1b[36m";
-let FgWhite = "\x1b[37m";
+const LEVELS = {
+    ERROR: 'error', // 0
+    WARN: 'warn', // 1
+    INFO: 'info', // 2
+    VERBOSE: 'verbose', // 3
+    DEBUG: 'debug', // 4
+    SILLY: 'silly' // 5
+};
 
-let BgBlack = "\x1b[40m";
-let BgRed = "\x1b[41m";
-let BgGreen = "\x1b[42m";
-let BgYellow = "\x1b[43m";
-let BgBlue = "\x1b[44m";
-let BgMagenta = "\x1b[45m";
-let BgCyan = "\x1b[46m";
-let BgWhite = "\x1b[47m";
+export function createLogger(options: any = {}) {
 
-export class Logger {
+    options = {
+        ...{label: ''},
+        ...options,
+    };
 
-    private readonly className: string;
-    private caller: string = "";
+    let loggerOptions: any = {
+        format: winston.format.combine(
+            winston.format.splat(),
+            winston.format.simple(),
+            winston.format.json(),
+        ),
+        transports: []
+    };
 
-    constructor(className: string) {
-        this.className = className;
+    const customLogFormat = winston.format.printf(({level, message, label, timestamp}) => {
+        return `${timestamp} [${label}] ${level}: ${message}`;
+    });
+    const label = winston.format.label({label: options.label});
+    const timestamp = winston.format.timestamp();
+
+    const console = new winston.transports.Console({
+        level: LEVELS.INFO,
+        format: winston.format.combine(
+            label,
+            timestamp,
+            winston.format.colorize(),
+            customLogFormat
+        )
+    });
+    loggerOptions.transports.push(console);
+
+    if (options.filePath) {
+        const file = new winston.transports.File({
+            filename: options.filePath, level: 'silly', format: winston.format.combine(
+                label,
+                timestamp,
+                customLogFormat
+            )
+        });
+        loggerOptions.transports.push(file);
     }
 
-    setCaller(caller: string) {
-        this.caller = caller;
-        return this;
-    }
-
-    log(message: any) {
-        console.log(FgGreen + "%s" + Reset, "[" + this.className + "::" + this.caller + "] " + message);
-    }
-
-    error(message: any) {
-        console.error(FgRed + "%s" + Reset, "[" + this.className + "::" + this.caller + " ] " + message);
-    }
+    return winston.createLogger(loggerOptions);
 }

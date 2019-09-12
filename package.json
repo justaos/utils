@@ -1,6 +1,6 @@
 {
   "name": "anysols-utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Anysols Utils - common utility functions used across anysols projects",
   "main": "./index.js",
   "scripts": {
@@ -56,7 +56,8 @@
     "bcrypt": "^3.0.6",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.4",
-    "jsonfile": "^5.0.0"
+    "jsonfile": "^5.0.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/jsonfile": "^5.0.0",
