@@ -17,11 +17,6 @@ export function createLogger(options: any = {}) {
     };
 
     let loggerOptions: any = {
-        format: winston.format.combine(
-            winston.format.splat(),
-            winston.format.simple(),
-            winston.format.json(),
-        ),
         transports: []
     };
 
@@ -56,5 +51,11 @@ export function createLogger(options: any = {}) {
         loggerOptions.transports.push(file);
     }
 
-    return winston.createLogger(loggerOptions);
+    let logger = winston.createLogger(loggerOptions);
+    // @ts-ignore
+    logger.logError = function(err: Error) {
+        // @ts-ignore
+        this.log({level:'error', message: new Error("and an error message")});
+    };
+    return logger;
 }
