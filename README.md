@@ -2,6 +2,7 @@
 Common utility functions used across anysols projects
 
 [![Coverage Status](https://coveralls.io/repos/github/anysols/anysols-utils/badge.svg?branch=master)](https://coveralls.io/github/anysols/anysols-utils?branch=master)
+[![CodeFactor](https://www.codefactor.io/repository/github/anysols/anysols-utils/badge)](https://www.codefactor.io/repository/github/anysols/anysols-utils)
 
 ## File Utils
 ```js
