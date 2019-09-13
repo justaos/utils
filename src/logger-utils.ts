@@ -9,53 +9,91 @@ const LEVELS = {
     SILLY: 'silly' // 5
 };
 
-export function createLogger(options: any = {}) {
+export class Logger {
 
-    options = {
-        ...{label: ''},
-        ...options,
-    };
+    logger: winston.Logger;
 
-    let loggerOptions: any = {
-        transports: []
-    };
+    constructor(options: any = {}) {
+        options = {
+            ...{label: ''},
+            ...options,
+        };
 
-    const customLogFormat = winston.format.printf((info: any) => {
-        if (info.message instanceof Error) {
-            info.message = info.message.stack;
-        }
-        return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
-    });
-    const label = winston.format.label({label: options.label});
-    const timestamp = winston.format.timestamp();
+        let loggerOptions: any = {
+            transports: []
+        };
 
-    const console = new winston.transports.Console({
-        level: LEVELS.INFO,
-        format: winston.format.combine(
-            label,
-            timestamp,
-            winston.format.colorize(),
-            customLogFormat
-        )
-    });
-    loggerOptions.transports.push(console);
+        const customLogFormat = winston.format.printf((info: any) => {
+            if (info.message instanceof Error) {
+                info.message = info.message.stack;
+            }
+            return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
+        });
+        const label = winston.format.label({label: options.label});
+        const timestamp = winston.format.timestamp();
 
-    if (options.filePath) {
-        const file = new winston.transports.File({
-            filename: options.filePath, level: 'silly', format: winston.format.combine(
+        const console = new winston.transports.Console({
+            level: LEVELS.INFO,
+            format: winston.format.combine(
                 label,
                 timestamp,
+                winston.format.colorize(),
                 customLogFormat
             )
         });
-        loggerOptions.transports.push(file);
+        loggerOptions.transports.push(console);
+
+        if (options.filePath) {
+            const file = new winston.transports.File({
+                filename: options.filePath, level: 'silly', format: winston.format.combine(
+                    label,
+                    timestamp,
+                    customLogFormat
+                )
+            });
+            loggerOptions.transports.push(file);
+        }
+
+        this.logger = winston.createLogger(loggerOptions);
     }
 
-    let logger = winston.createLogger(loggerOptions);
-    // @ts-ignore
-    logger.logError = function(err: Error) {
+    log(options: any) {
         // @ts-ignore
-        this.log({level:'error', message: new Error("and an error message")});
-    };
-    return logger;
+        return this.logger.log.apply(this.logger, arguments);
+    }
+
+    error(options: any) {
+        // @ts-ignore
+        return this.logger.error.apply(this.logger, arguments);
+    }
+
+    info(options: any) {
+        // @ts-ignore
+        return this.logger.info.apply(this.logger, arguments);
+    }
+
+    warn(options: any) {
+        // @ts-ignore
+        return this.logger.warn.apply(this.logger, arguments);
+    }
+
+    debug(options: any) {
+        // @ts-ignore
+        return this.logger.debug.apply(this.logger, arguments);
+    }
+
+    silly(options: any) {
+        // @ts-ignore
+        return this.logger.silly.apply(this.logger, arguments);
+    }
+
+    logError(err: Error) {
+        this.log({level: 'error', message: err});
+    }
+
+}
+
+
+export function createLogger(options: any = {}) {
+    return new Logger(options);
 }

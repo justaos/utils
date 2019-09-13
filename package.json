@@ -1,6 +1,6 @@
 {
   "name": "anysols-utils",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Anysols Utils - common utility functions used across anysols projects",
   "main": "./index.js",
   "scripts": {
