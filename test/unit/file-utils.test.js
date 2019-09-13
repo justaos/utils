@@ -4,6 +4,13 @@ const utils = require('../../lib');
 
 describe('file-utils', function () {
 
+    before(function() {
+       let dir = __dirname + '/../resources/_temp_';
+        if (!fs.existsSync(dir)){
+            fs.mkdirSync(dir);
+        }
+    });
+
     it('#readJsonFileSync()', function () {
         let obj = utils.readJsonFileSync('test/resources/sample.json');
         assert.equal(obj.title, 'Hello');
