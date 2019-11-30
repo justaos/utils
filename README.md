@@ -1,6 +1,7 @@
 # Anysols Utils
 Common utility functions used across anysols projects
 
+[![Build](https://github.com/anysols/anysols-utils/workflows/Node%20CI/badge.svg)](https://github.com/anysols/anysols-utils/actions?workflow=Node+CI)
 [![Coverage Status](https://coveralls.io/repos/github/anysols/anysols-utils/badge.svg?branch=master)](https://coveralls.io/github/anysols/anysols-utils?branch=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/anysols/anysols-utils/badge)](https://www.codefactor.io/repository/github/anysols/anysols-utils)
 
