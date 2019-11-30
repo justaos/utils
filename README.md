@@ -8,7 +8,7 @@ Common utility functions used across anysols projects
 ## File Utils
 ```js
 //  Read a json file
-const utils = require('anysols-utils');
+const utils = require('@anysols/anysols-utils');
 let obj = utils.readJsonFileSync('test/resources/sample.json');
 console.log(JSON.stringify(obj)); // prints content of sample.json
 
@@ -21,7 +21,7 @@ console.log(JSON.stringify(obj)); // prints {title: 'Write'}
 
 ## String Utils
 ```js
-const utils = require('anysols-utils');
+const utils = require('@anysols/anysols-utils');
 const temp = utils.underscoreToCamelCase('hello_world');
 console.log(temp); // prints 'Hello World'
 ```
