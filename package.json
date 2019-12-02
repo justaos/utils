@@ -1,5 +1,5 @@
 {
-  "name": "@anysols/anysols-utils",
+  "name": "@anysols/utils",
   "version": "0.5.1",
   "description": "Anysols Utils - common utility functions used across anysols projects",
   "main": "./index.js",
@@ -53,7 +53,7 @@
   },
   "homepage": "https://anysols.com",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcryptjs": "^2.4.3",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "jsonfile": "^5.0.0",
@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@types/jsonfile": "^5.0.0",
-    "@types/bcrypt": "^3.0.0",
+    "@types/bcryptjs": "^2.4.2",
     "@types/fs-extra": "^8.0.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.6",
