@@ -57,34 +57,28 @@ export class Logger {
         this.logger = winston.createLogger(loggerOptions);
     }
 
-    log(options: any) {
-        // @ts-ignore
-        return this.logger.log.apply(this.logger, arguments);
+    log(...args: any) {
+        return this.logger.log.apply(this.logger, args);
     }
 
-    error(options: any) {
-        // @ts-ignore
-        return this.logger.error.apply(this.logger, arguments);
+    error(...args: any) {
+        return this.logger.error.apply(this.logger, args);
     }
 
-    info(options: any) {
-        // @ts-ignore
-        return this.logger.info.apply(this.logger, arguments);
+    info(...args: any) {
+        return this.logger.info.apply(this.logger, args);
     }
 
-    warn(options: any) {
-        // @ts-ignore
-        return this.logger.warn.apply(this.logger, arguments);
+    warn(...args: any) {
+        return this.logger.warn.apply(this.logger, args);
     }
 
-    debug(options: any) {
-        // @ts-ignore
-        return this.logger.debug.apply(this.logger, arguments);
+    debug(...args: any) {
+        return this.logger.debug.apply(this.logger, args);
     }
 
-    silly(options: any) {
-        // @ts-ignore
-        return this.logger.silly.apply(this.logger, arguments);
+    silly(...args: any) {
+        return this.logger.silly.apply(this.logger, args);
     }
 
     logError(err: Error) {
