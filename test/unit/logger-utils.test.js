@@ -5,10 +5,6 @@ const {TEST_RESOURCES_PATH} = require("../test.utils");
 
 const LOG_FILEPATH =  TEST_RESOURCES_PATH + '/test.log';
 
-function clearLogFile() {
-    utils.writeFileSync(LOG_FILEPATH, "");
-}
-
 describe('logger-utils', function () {
 
     let logger;
