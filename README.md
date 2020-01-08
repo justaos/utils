@@ -1,14 +1,14 @@
-# Anysols Utils
-Common utility functions used across anysols projects
+# plt4rm's Utils
+Common utility functions used across plt4rm projects.
 
-[![Build](https://github.com/anysols/anysols-utils/workflows/Node%20CI/badge.svg)](https://github.com/anysols/anysols-utils/actions?workflow=Node+CI)
-[![Coverage Status](https://coveralls.io/repos/github/anysols/anysols-utils/badge.svg?branch=master)](https://coveralls.io/github/anysols/anysols-utils?branch=master)
-[![CodeFactor](https://www.codefactor.io/repository/github/anysols/anysols-utils/badge)](https://www.codefactor.io/repository/github/anysols/anysols-utils)
+[![Build](https://github.com/plt4rm/utils/workflows/Node%20CI/badge.svg)](https://github.com/plt4rm/utils/actions?workflow=Node+CI)
+[![Coverage Status](https://coveralls.io/repos/github/plt4rm/utils/badge.svg?branch=master)](https://coveralls.io/github/plt4rm/utils?branch=master)
+[![CodeFactor](https://www.codefactor.io/repository/github/plt4rm/utils/badge)](https://www.codefactor.io/repository/github/plt4rm/utils)
 
 ## File Utils
 ```js
 //  Read a json file
-const utils = require('@anysols/utils');
+const utils = require('@plt4rm/utils');
 let obj = utils.readJsonFileSync('test/resources/sample.json');
 console.log(JSON.stringify(obj)); // prints content of sample.json
 
@@ -21,7 +21,7 @@ console.log(JSON.stringify(obj)); // prints {title: 'Write'}
 
 ## String Utils
 ```js
-const utils = require('@anysols/utils');
+const utils = require('@plt4rm/utils');
 const temp = utils.underscoreToCamelCase('hello_world');
 console.log(temp); // prints 'Hello World'
 ```

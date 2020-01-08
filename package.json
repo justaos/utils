@@ -1,7 +1,7 @@
 {
-  "name": "@anysols/utils",
+  "name": "@plt4rm/utils",
   "version": "0.6.6",
-  "description": "Anysols Utils - common utility functions used across anysols projects",
+  "description": "plt4rm Utils - common utility functions used across plt4rm projects",
   "main": "./index.js",
   "scripts": {
     "prepare": "npm run build",
@@ -16,8 +16,8 @@
     "index.ts"
   ],
   "keywords": [
-    "anysols",
-    "anysols utils",
+    "plt4rm",
+    "plt4rm utils",
     "file utils",
     "string utils"
   ],
@@ -43,15 +43,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anysols/anysols-utils.git"
+    "url": "git+https://github.com/plt4rm/utils.git"
   },
   "author": "Shivaji Varma <contact@shivajivarma.com>",
   "contributors": [],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/anysols/anysols-utils/issues"
+    "url": "https://github.com/plt4rm/utils/issues"
   },
-  "homepage": "https://anysols.com",
+  "homepage": "https://plt4rm.com",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "fs-extra": "^8.1.0",
