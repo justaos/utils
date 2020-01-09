@@ -1,13 +1,14 @@
-const {assert, expect} = require('chai');
-const utils = require('../../lib');
-const fs = require('fs');
-const {TEST_RESOURCES_PATH} = require("../test.utils");
+import {assert, expect} from "chai";
+import "mocha";
+import * as fs from "fs";
+import * as utils from "../../src";
+import {TEST_RESOURCES_PATH} from "../test.utils";
 
 const LOG_FILEPATH =  TEST_RESOURCES_PATH + '/test.log';
 
 describe('logger-utils', function () {
 
-    let logger;
+    let logger: any;
 
     after(function () {
         fs.unlinkSync(LOG_FILEPATH);

@@ -1,5 +1,6 @@
-const {assert} = require('chai');
-const utils = require('../../lib');
+import {assert} from "chai";
+import "mocha";
+import * as utils from "../../src";
 
 describe('ds-utils', function () {
 
