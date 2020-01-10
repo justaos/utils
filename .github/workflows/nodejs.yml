@@ -34,7 +34,3 @@ jobs:
       with:
         path-to-lcov: ./docs/reports/coverage/lcov.info
         github-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: npm publish
-      run: npm publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
