@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "gulp | tsc",
-    "test": "nyc mocha --r ts-node/register test/unit/**/*.test.ts",
+    "test": "nyc mocha test/unit/**/*.test.ts",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "release": "npm publish"
   },
