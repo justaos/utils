@@ -3,11 +3,11 @@ import * as glob from "glob";
 import * as jsonfile from "jsonfile";
 
 
-export function readJsonFileSync(file: any, options: any) {
+export function readJsonFileSync(file: any, options?: any) {
     return jsonfile.readFileSync(file, options);
 }
 
-export function readJsonFilesFromPathSync(path: any, options: any) {
+export function readJsonFilesFromPathSync(path: any, options?: any) {
     let result: any[] = [];
     glob.sync(path).forEach((file: any) => {
         let data = readJsonFileSync(file, options);

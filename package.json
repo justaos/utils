@@ -1,6 +1,6 @@
 {
   "name": "@plt4rm/utils",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "plt4rm Utils - common utility functions used across plt4rm projects",
   "main": "./index.js",
   "scripts": {
@@ -60,7 +60,8 @@
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "jsonfile": "^5.0.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -68,6 +69,7 @@
     "@types/fs-extra": "^8.0.0",
     "@types/jsonfile": "^5.0.0",
     "@types/mocha": "^5.2.7",
+    "@types/shelljs": "^0.8.6",
     "chai": "^4.2.0",
     "coveralls": "^3.0.6",
     "del": "^5.1.0",

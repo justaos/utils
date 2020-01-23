@@ -21,13 +21,13 @@ describe("file-utils", function () {
     });
 
     it("#readJsonFileSync()", function () {
-        let obj = utils.readJsonFileSync(TEST_RESOURCES_PATH + "/sample.json", null);
+        let obj = utils.readJsonFileSync(TEST_RESOURCES_PATH + "/sample.json");
         assert.equal(obj.title, "Hello");
     });
 
     it("#writeJsonFileSync()", function () {
         utils.writeJsonFileSync(TEST_RESOURCES_PATH + "/_temp_/write.json", {title: "Write"});
-        let obj = utils.readJsonFileSync(TEST_RESOURCES_PATH + "/_temp_/write.json", null);
+        let obj = utils.readJsonFileSync(TEST_RESOURCES_PATH + "/_temp_/write.json");
         assert.equal(obj.title, "Write");
     });
 
@@ -38,14 +38,14 @@ describe("file-utils", function () {
     });
 
     it("#readJsonFilesFromPathSync()", function () {
-        let objs = utils.readJsonFilesFromPathSync(TEST_RESOURCES_PATH + "/path/**.json", null);
+        let objs = utils.readJsonFilesFromPathSync(TEST_RESOURCES_PATH + "/path/**.json");
         assert.equal(objs[0].title, "a");
         assert.equal(objs[1].title, "b");
     });
 
     it("#copySync()", function () {
         utils.copySync(TEST_RESOURCES_PATH + "/path", TEST_RESOURCES_PATH + "/copy");
-        let objs = utils.readJsonFilesFromPathSync(TEST_RESOURCES_PATH + "/copy/**.json", null);
+        let objs = utils.readJsonFilesFromPathSync(TEST_RESOURCES_PATH + "/copy/**.json");
         assert.equal(objs[0].title, "a");
         assert.equal(objs[1].title, "b");
     });
