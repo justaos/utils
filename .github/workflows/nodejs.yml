@@ -41,12 +41,14 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-      - uses: EndBug/version-check@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - name: Check if version has been updated
+        uses: EndBug/version-check@v1
+        id: check
 
+      - run: npm ci
       - name: Version update detected
         if: steps.check.outputs.changed == 'true'
           run: 'echo "Version change found! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
