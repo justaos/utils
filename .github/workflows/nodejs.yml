@@ -34,3 +34,19 @@ jobs:
       with:
         path-to-lcov: ./docs/reports/coverage/lcov.info
         github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - uses: EndBug/version-check@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+
+      - name: Version update detected
+        if: steps.check.outputs.changed == 'true'
+          run: 'echo "Version change found! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
