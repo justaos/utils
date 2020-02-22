@@ -24,8 +24,8 @@ export function writeFileSync(file: any, str: string) {
     return fs.writeFileSync(file, str);
 }
 
-export function readFileSync(file: any) {
-    return fs.readFileSync(file);
+export function readFileSync(file: any, options?: any) {
+    return fs.readFileSync(file, options);
 }
 
 export function copySync(src: string, dest: string) {
