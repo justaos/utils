@@ -4,7 +4,7 @@ const privates = Symbol('privates');
 
 export class EmailSendHandler {
 
-    private [privates]: any;
+    private [privates]: any = {};
 
     constructor(config: any) {
         this[privates].transport = nodemailer.createTransport(config);
