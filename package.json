@@ -1,6 +1,6 @@
 {
   "name": "@plt4rm/utils",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "plt4rm Utils - common utility functions used across plt4rm projects",
   "main": "./index.js",
   "scripts": {
@@ -65,6 +65,7 @@
     "mailparser": "^2.8.0",
     "node-email-reply-parser": "^0.1.1",
     "nodemailer": "^6.4.4",
+    "parse-email": "^1.0.0",
     "shelljs": "^0.8.3",
     "winston": "^3.2.1"
   },
