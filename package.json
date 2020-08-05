@@ -1,6 +1,6 @@
 {
   "name": "@plt4rm/utils",
-  "version": "0.7.9",
+  "version": "0.8.0",
   "description": "plt4rm Utils - common utility functions used across plt4rm projects",
   "main": "./index.js",
   "scripts": {

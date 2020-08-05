@@ -2,9 +2,10 @@ import * as nodemailer from "nodemailer";
 import * as Mail from "nodemailer/lib/mailer";
 import * as Imap from 'imap';
 import {createLogger} from "./logger-utils";
-const parse = require('parse-email');
 // @ts-ignore
 import * as replyParser from "node-email-reply-parser";
+
+const parse = require('parse-email');
 
 
 export class EmailSendHandler {
@@ -24,6 +25,10 @@ export function parseReply(mailText: string) {
     return replyParser(mailText, true)
 }
 
+export function parseMail(buffer: string) {
+    return parse(buffer);
+}
+
 export class EmailReceiveHandler {
 
     #imap: Imap;
@@ -38,7 +43,6 @@ export class EmailReceiveHandler {
             logger.info("IMAP receiver ready");
             this.#imap.openBox('INBOX', true, (err, box) => {
                 total = box.messages.total;
-                console.log("total :: " + total);
             });
         });
 
@@ -48,7 +52,7 @@ export class EmailReceiveHandler {
                 return;
             }
 
-            const fetch = this.#imap.seq.fetch(total + ":*", {
+            const fetch = this.#imap.seq.fetch((total + 1) + ":*", {
                 bodies: ['']
             });
 
@@ -57,7 +61,6 @@ export class EmailReceiveHandler {
 
             fetch.on('message', (msg, seqno) => {
 
-                console.log("#seqno :: " + seqno);
                 msg.on('body', function (stream, info) {
 
                     let buffer = '';
@@ -65,17 +68,12 @@ export class EmailReceiveHandler {
                         buffer += chunk.toString('utf8');
                     });
                     stream.once('end', function () {
-                        parse(buffer).then(function (parsedMail: any) {
-                            callback(buffer, parsedMail);
-                        }).catch(function (err: Error) {
-                            callback(err);
-                            console.log('An error occurred:', err.message);
-                        });
+                        callback(buffer, seqno);
                     });
                 });
             });
 
-            fetch.once('error', function (err) {
+            fetch.once('error', function (err: Error) {
                 callback(err);
             });
         })
