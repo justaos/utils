@@ -37,64 +37,62 @@ export class EmailReceiveHandler {
         this.#imap = new Imap(config);
     }
 
-    async connect() {
+    connect(resolve: any, reject: any) {
         const that = this;
-        return new Promise<any>((resolve, reject) => {
-            let firstSkipped = false;
-            let totalMessagesInInbox = 0;
 
-            that.#imap.once('ready', () => {
-                logger.info("IMAP receiver ready");
-                that.#imap.openBox('INBOX', true, (err, box) => {
-                    totalMessagesInInbox = box.messages.total;
-                    logger.info(`Total Inbox Messages [${totalMessagesInInbox}]`)
-                });
+        let firstSkipped = false;
+        let totalMessagesInInbox = 0;
+
+        that.#imap.once('ready', () => {
+            logger.info("IMAP receiver ready");
+            that.#imap.openBox('INBOX', true, (err, box) => {
+                totalMessagesInInbox = box.messages.total;
+                logger.info(`Total Inbox Messages [${totalMessagesInInbox}]`)
             });
-
-            that.#imap.on('mail', (numNewMsgs: number) => {
-                if (!firstSkipped) {
-                    firstSkipped = true
-                    return;
-                }
-
-                const fetch = that.#imap.seq.fetch((totalMessagesInInbox + 1) + ":*", {
-                    bodies: ['']
-                });
-
-                totalMessagesInInbox = totalMessagesInInbox + numNewMsgs;
-
-
-                fetch.on('message', (message, seqno) => {
-
-                    message.on('body', function (stream, info) {
-
-                        let buffer = '';
-                        stream.on('data', function (chunk) {
-                            buffer += chunk.toString();
-                        });
-                        stream.once('end', function () {
-                            resolve({buffer, seqno});
-                        });
-                    });
-                });
-
-                fetch.once('error', function (err: Error) {
-                    reject(err);
-                });
-            })
-
-            that.#imap.once('error', function (err: Error) {
-                reject(err);
-                logger.logError(err);
-            });
-
-            that.#imap.once('end', function () {
-                console.log('Connection ended');
-            });
-
-            that.#imap.connect();
         });
 
+        that.#imap.on('mail', (numNewMsgs: number) => {
+            if (!firstSkipped) {
+                firstSkipped = true
+                return;
+            }
+
+            const fetch = that.#imap.seq.fetch((totalMessagesInInbox + 1) + ":*", {
+                bodies: ['']
+            });
+
+            totalMessagesInInbox = totalMessagesInInbox + numNewMsgs;
+
+
+            fetch.on('message', (message, seqno) => {
+
+                message.on('body', function (stream, info) {
+
+                    let buffer = '';
+                    stream.on('data', function (chunk) {
+                        buffer += chunk.toString();
+                    });
+                    stream.once('end', function () {
+                        resolve({buffer, seqno});
+                    });
+                });
+            });
+
+            fetch.once('error', function (err: Error) {
+                reject(err);
+            });
+        })
+
+        that.#imap.once('error', function (err: Error) {
+            reject(err);
+            logger.logError(err);
+        });
+
+        that.#imap.once('end', function () {
+            console.log('Connection ended');
+        });
+
+        that.#imap.connect();
     }
 
 
