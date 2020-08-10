@@ -1,11 +1,11 @@
 import * as nodemailer from "nodemailer";
-import * as Mail from "nodemailer/lib/mailer";
-import * as Imap from 'imap';
+import Mail from "nodemailer/lib/mailer";
+import Imap from "imap";
 import {createLogger} from "./logger-utils";
-// @ts-ignore
-import * as replyParser from "node-email-reply-parser";
+import {simpleParser} from "mailparser";
 
-const parse = require('parse-email');
+const replyParser = require("node-email-reply-parser");
+
 
 
 export class EmailSendHandler {
@@ -26,7 +26,7 @@ export function parseReply(mailText: string) {
 }
 
 export function parseMail(buffer: string) {
-    return parse(buffer);
+    return simpleParser(buffer);
 }
 
 export class EmailReceiveHandler {
@@ -44,10 +44,10 @@ export class EmailReceiveHandler {
         let totalMessagesInInbox = 0;
 
         that.#imap.once('ready', () => {
-            logger.info("IMAP receiver ready");
+            emailReceiverLogger.info("IMAP receiver ready");
             that.#imap.openBox('INBOX', true, (err, box) => {
                 totalMessagesInInbox = box.messages.total;
-                logger.info(`Total Inbox Messages [${totalMessagesInInbox}]`)
+                emailReceiverLogger.info(`Total Inbox Messages [${totalMessagesInInbox}]`)
             });
         });
 
@@ -85,11 +85,11 @@ export class EmailReceiveHandler {
 
         that.#imap.once('error', function (err: Error) {
             reject(err);
-            logger.logError(err);
+            emailReceiverLogger.logError(err);
         });
 
         that.#imap.once('end', function () {
-            console.log('Connection ended');
+            emailReceiverLogger.info('Connection ended');
         });
 
         that.#imap.connect();
@@ -98,4 +98,5 @@ export class EmailReceiveHandler {
 
 }
 
-const logger = createLogger({label: EmailSendHandler.name});
+const emailSenderLogger = createLogger({label: EmailSendHandler.name});
+const emailReceiverLogger = createLogger({label: EmailReceiveHandler.name});
