@@ -2,7 +2,7 @@ import * as nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 import Imap from "imap";
 import {createLogger} from "./logger-utils";
-import {simpleParser} from "mailparser";
+import * as mailparser from "mailparser";
 
 const replyParser = require("node-email-reply-parser");
 
@@ -26,7 +26,7 @@ export function parseReply(mailText: string) {
 }
 
 export function parseMail(buffer: string) {
-    return simpleParser(buffer);
+    return mailparser.simpleParser(buffer);
 }
 
 export class EmailReceiveHandler {
@@ -83,16 +83,27 @@ export class EmailReceiveHandler {
             });
         })
 
-        that.#imap.once('error', function (err: Error) {
+        that.#imap.on('error', function (err: Error) {
             reject(err);
             emailReceiverLogger.logError(err);
         });
 
-        that.#imap.once('end', function () {
+        that.#imap.on('end', function () {
             emailReceiverLogger.info('Connection ended');
         });
 
+        that.#imap.on('close', function (err: Error) {
+            emailReceiverLogger.info("Connection closed. Will retry to connect after 10 secs");
+            setTimeout(()=> {
+                that.#imap.connect();
+            }, 10000);
+        });
+
         that.#imap.connect();
+    }
+
+    end() {
+        return this.#imap.end();
     }
 
 
