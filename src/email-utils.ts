@@ -2,7 +2,7 @@ import * as nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 import Imap from "imap";
 import {createLogger} from "./logger-utils";
-import * as mailparser from "mailparser";
+import {simpleParser} from "mailparser";
 
 const replyParser = require("node-email-reply-parser");
 
@@ -26,7 +26,7 @@ export function parseReply(mailText: string) {
 }
 
 export function parseMail(buffer: string) {
-    return mailparser.simpleParser(buffer);
+    return simpleParser(buffer);
 }
 
 export class EmailReceiveHandler {
