@@ -1,6 +1,7 @@
 # plt4rm's Utils
 Common utility functions used across plt4rm projects.
 
+[![Version](https://img.shields.io/npm/v/@plt4rm/utils)](https://img.shields.io/npm/v/@plt4rm/utils)
 [![Build](https://github.com/plt4rm/utils/workflows/Node%20CI/badge.svg)](https://github.com/plt4rm/utils/actions?workflow=Node+CI)
 [![Coverage Status](https://coveralls.io/repos/github/plt4rm/utils/badge.svg?branch=master)](https://coveralls.io/github/plt4rm/utils?branch=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/plt4rm/utils/badge)](https://www.codefactor.io/repository/github/plt4rm/utils)

@@ -1,93 +1,88 @@
 import * as winston from 'winston';
 
 const LEVELS = {
-    ERROR: 'error', // 0
-    WARN: 'warn', // 1
-    INFO: 'info', // 2
-    VERBOSE: 'verbose', // 3
-    DEBUG: 'debug', // 4
-    SILLY: 'silly' // 5
+  ERROR: 'error', // 0
+  WARN: 'warn', // 1
+  INFO: 'info', // 2
+  VERBOSE: 'verbose', // 3
+  DEBUG: 'debug', // 4
+  SILLY: 'silly', // 5
 };
 
 export class Logger {
+  logger: winston.Logger;
 
-    logger: winston.Logger;
+  constructor(options: any = {}) {
+    options = {
+      ...{ label: '' },
+      ...options,
+    };
 
-    constructor(options: any = {}) {
-        options = {
-            ...{label: ''},
-            ...options,
-        };
+    const loggerOptions: any = {
+      transports: [],
+    };
 
-        const loggerOptions: any = {
-            transports: []
-        };
+    const customLogFormat = winston.format.printf((info: any) => {
+      if (info.message instanceof Error) {
+        info.message = info.message.stack;
+      }
+      return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
+    });
+    const label = winston.format.label({ label: options.label });
+    const timestamp = winston.format.timestamp();
 
-        const customLogFormat = winston.format.printf((info: any) => {
-            if (info.message instanceof Error) {
-                info.message = info.message.stack;
-            }
-            return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
-        });
-        const label = winston.format.label({label: options.label});
-        const timestamp = winston.format.timestamp();
+    const console = new winston.transports.Console({
+      level: LEVELS.INFO,
+      format: winston.format.combine(
+        label,
+        timestamp,
+        winston.format.colorize(),
+        customLogFormat,
+      ),
+    });
+    loggerOptions.transports.push(console);
 
-        const console = new winston.transports.Console({
-            level: LEVELS.INFO,
-            format: winston.format.combine(
-                label,
-                timestamp,
-                winston.format.colorize(),
-                customLogFormat
-            )
-        });
-        loggerOptions.transports.push(console);
-
-        if (options.filePath) {
-            const file = new winston.transports.File({
-                filename: options.filePath, level: 'silly', format: winston.format.combine(
-                    label,
-                    timestamp,
-                    customLogFormat
-                )
-            });
-            loggerOptions.transports.push(file);
-        }
-
-        this.logger = winston.createLogger(loggerOptions);
+    if (options.filePath) {
+      const file = new winston.transports.File({
+        filename: options.filePath,
+        level: 'silly',
+        format: winston.format.combine(label, timestamp, customLogFormat),
+      });
+      loggerOptions.transports.push(file);
     }
 
-    log(...args: any): any {
-        return this.logger.log.apply(this.logger, args); // eslint-disable-line
-    }
+    this.logger = winston.createLogger(loggerOptions);
+  }
 
-    error(...args: any): any {
-        return this.logger.error.apply(this.logger, args); // eslint-disable-line
-    }
+  log(...args: any): any {
+    return this.logger.log.apply(this.logger, args); // eslint-disable-line
+  }
 
-    info(...args: any): any {
-        return this.logger.info.apply(this.logger, args); // eslint-disable-line
-    }
+  error(...args: any): any {
+    return this.logger.error.apply(this.logger, args); // eslint-disable-line
+  }
 
-    warn(...args: any): any {
-        return this.logger.warn.apply(this.logger, args); // eslint-disable-line
-    }
+  info(...args: any): any {
+    return this.logger.info.apply(this.logger, args); // eslint-disable-line
+  }
 
-    debug(...args: any): any {
-        return this.logger.debug.apply(this.logger, args); // eslint-disable-line
-    }
+  warn(...args: any): any {
+    return this.logger.warn.apply(this.logger, args); // eslint-disable-line
+  }
 
-    silly(...args: any): any {
-        return this.logger.silly.apply(this.logger, args); // eslint-disable-line
-    }
+  debug(...args: any): any {
+    return this.logger.debug.apply(this.logger, args); // eslint-disable-line
+  }
 
-    logError(err: Error): any {
-        return this.log({level: 'error', message: err});
-    }
+  silly(...args: any): any {
+    return this.logger.silly.apply(this.logger, args); // eslint-disable-line
+  }
 
+  logError(err: Error): any {
+    return this.log({ level: 'error', message: err });
+  }
 }
 
-
 export function createLogger(options: any = {}) {
-    return new Logger(options);
+  return new Logger(options);
 }
