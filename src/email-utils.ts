@@ -3,9 +3,8 @@ import Mail from "nodemailer/lib/mailer";
 import Imap from "imap";
 import {createLogger} from "./logger-utils";
 import {simpleParser} from "mailparser";
-
-const replyParser = require("node-email-reply-parser");
-
+// @ts-ignore
+import replyParser from "node-email-reply-parser";
 
 
 export class EmailSendHandler {
@@ -21,7 +20,7 @@ export class EmailSendHandler {
     }
 }
 
-export function parseReply(mailText: string) {
+export function parseReply(mailText: string): string {
     return replyParser(mailText, true)
 }
 
@@ -38,26 +37,25 @@ export class EmailReceiveHandler {
     }
 
     connect(resolve: any, reject: any) {
-        const that = this;
 
         let firstSkipped = false;
         let totalMessagesInInbox = 0;
 
-        that.#imap.once('ready', () => {
+        this.#imap.once('ready', () => {
             emailReceiverLogger.info("IMAP receiver ready");
-            that.#imap.openBox('INBOX', true, (err, box) => {
+            this.#imap.openBox('INBOX', true, (err, box) => {
                 totalMessagesInInbox = box.messages.total;
                 emailReceiverLogger.info(`Total Inbox Messages [${totalMessagesInInbox}]`)
             });
         });
 
-        that.#imap.on('mail', (numNewMsgs: number) => {
+        this.#imap.on('mail', (numNewMsgs: number) => {
             if (!firstSkipped) {
                 firstSkipped = true
                 return;
             }
 
-            const fetch = that.#imap.seq.fetch((totalMessagesInInbox + 1) + ":*", {
+            const fetch = this.#imap.seq.fetch((totalMessagesInInbox + 1) + ":*", {
                 bodies: ['']
             });
 
@@ -83,31 +81,29 @@ export class EmailReceiveHandler {
             });
         })
 
-        that.#imap.on('error', function (err: Error) {
+        this.#imap.on('error', function (err: Error) {
             reject(err);
             emailReceiverLogger.logError(err);
         });
 
-        that.#imap.on('end', function () {
+        this.#imap.on('end', function () {
             emailReceiverLogger.info('Connection ended');
         });
 
-        that.#imap.on('close', function (err: Error) {
+        this.#imap.on('close', (err: Error) => {
             emailReceiverLogger.info("Connection closed. Will retry to connect after 10 secs");
-            setTimeout(()=> {
-                that.#imap.connect();
+            setTimeout(() => {
+                this.#imap.connect();
             }, 10000);
         });
 
-        that.#imap.connect();
+        this.#imap.connect();
     }
 
     end() {
         return this.#imap.end();
     }
 
-
 }
 
-const emailSenderLogger = createLogger({label: EmailSendHandler.name});
 const emailReceiverLogger = createLogger({label: EmailReceiveHandler.name});

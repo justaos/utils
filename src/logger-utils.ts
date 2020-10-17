@@ -19,7 +19,7 @@ export class Logger {
             ...options,
         };
 
-        let loggerOptions: any = {
+        const loggerOptions: any = {
             transports: []
         };
 
@@ -57,32 +57,32 @@ export class Logger {
         this.logger = winston.createLogger(loggerOptions);
     }
 
-    log(...args: any) {
-        return this.logger.log.apply(this.logger, args);
+    log(...args: any): any {
+        return this.logger.log.apply(this.logger, args); // eslint-disable-line
     }
 
-    error(...args: any) {
-        return this.logger.error.apply(this.logger, args);
+    error(...args: any): any {
+        return this.logger.error.apply(this.logger, args); // eslint-disable-line
     }
 
-    info(...args: any) {
-        return this.logger.info.apply(this.logger, args);
+    info(...args: any): any {
+        return this.logger.info.apply(this.logger, args); // eslint-disable-line
     }
 
-    warn(...args: any) {
-        return this.logger.warn.apply(this.logger, args);
+    warn(...args: any): any {
+        return this.logger.warn.apply(this.logger, args); // eslint-disable-line
     }
 
-    debug(...args: any) {
-        return this.logger.debug.apply(this.logger, args);
+    debug(...args: any): any {
+        return this.logger.debug.apply(this.logger, args); // eslint-disable-line
     }
 
-    silly(...args: any) {
-        return this.logger.silly.apply(this.logger, args);
+    silly(...args: any): any {
+        return this.logger.silly.apply(this.logger, args); // eslint-disable-line
     }
 
-    logError(err: Error) {
-        this.log({level: 'error', message: err});
+    logError(err: Error): any {
+        return this.log({level: 'error', message: err});
     }
 
 }

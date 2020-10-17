@@ -1,7 +1,6 @@
 import * as shell from "shelljs";
 
-// generating a hash
-export function checkoutRepository(path: string, repositoryUrl: string) {
+export function checkoutRepository(path: string, repositoryUrl: string): Promise<any> {
     if (!path)
         throw new Error("path is required parameter");
     if (!repositoryUrl)

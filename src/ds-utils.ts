@@ -1,4 +1,4 @@
-export function flatToHierarchy(flat: any[]) {
+export function flatToHierarchy(flat: any[]): any[] {
 
     const roots: any[] = []; // things without parent
     const all: any = {};
@@ -8,12 +8,12 @@ export function flatToHierarchy(flat: any[]) {
     });
 
     // connect children to its parent, and split roots apart
-    for (let key of Object.keys(all)) {
-        let item = all[key];
+    for (const key of Object.keys(all)) {
+        const item = all[key];
         if (!item.parent) {
             roots.push(item);
         } else if (item.parent in all) {
-            let p = all[item.parent];
+            const p = all[item.parent];
             if (!('children' in p))
                 p.children = [];
             p.children.push(item);
