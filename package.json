@@ -1,7 +1,7 @@
 {
-  "name": "@plt4rm/utils",
+  "name": "@p4rm/utils",
   "version": "0.9.3",
-  "description": "plt4rm Utils - common utility functions used across plt4rm projects",
+  "description": "P4RM Utils - common utility functions used across plt4rm projects",
   "main": "./index.js",
   "scripts": {
     "prepare": "npm run build",
@@ -46,6 +46,7 @@
     ],
     "report-dir": "docs/reports/coverage"
   },
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/plt4rm/utils.git"
