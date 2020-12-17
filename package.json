@@ -1,99 +1,18 @@
 {
   "name": "@p4rm/utils",
-  "version": "0.9.3",
-  "description": "P4RM Utils - common utility functions used across plt4rm projects",
-  "main": "./index.js",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "prepare": "npm run build",
-    "build": "gulp | tsc",
-    "lint": "eslint ./src --ext .ts,.tsx",
-    "test": "nyc mocha test/unit/**/*.test.ts",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "release": "npm publish"
-  },
-  "files": [
-    "lib",
-    "src",
-    "index.js",
-    "index.ts"
-  ],
-  "keywords": [
-    "plt4rm",
-    "plt4rm utils",
-    "file utils",
-    "string utils"
-  ],
-  "nyc": {
-    "check-coverage": false,
-    "all": true,
-    "extension": [
-      ".ts"
-    ],
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "**/**.interface.ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "html",
-      "lcov",
-      "text",
-      "text-summary"
-    ],
-    "report-dir": "docs/reports/coverage"
-  },
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/plt4rm/utils.git"
-  },
-  "author": "Shivaji Varma <contact@shivajivarma.com>",
-  "contributors": [],
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/plt4rm/utils/issues"
-  },
-  "homepage": "https://plt4rm.com",
-  "dependencies": {
-    "bcryptjs": "2.4.3",
-    "fs-extra": "8.1.0",
-    "glob": "^7.1.6",
-    "imap": "0.8.19",
-    "jsonfile": "5.0.0",
-    "node-email-reply-parser": "0.1.1",
-    "nodemailer": "6.4.14",
-    "shelljs": "0.8.3",
-    "winston": "3.2.1",
-    "mailparser": "2.8.1"
+    "postinstall": "npm run bootstrap",
+    "bootstrap": "lerna bootstrap --no-ci --hoist",
+    "build": "lerna run build"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
-    "@types/chai": "^4.2.7",
-    "@types/fs-extra": "^8.0.0",
-    "@types/imap": "^0.8.31",
-    "@types/jsonfile": "^5.0.0",
-    "@types/mailparser": "^2.7.3",
-    "@types/mocha": "^5.2.7",
+    "lerna": "^3.22.1",
+    "typescript": "^4.0.3",
     "@types/node": "^14.11.10",
-    "@types/nodemailer": "^6.4.0",
-    "@types/shelljs": "^0.8.6",
-    "@typescript-eslint/eslint-plugin": "^4.4.1",
-    "@typescript-eslint/parser": "^4.4.1",
-    "chai": "^4.2.0",
-    "coveralls": "^3.0.11",
-    "del": "^5.1.0",
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.13.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "gulp": "^4.0.2",
-    "mocha": "^8.1.1",
-    "nyc": "^15.1.0",
-    "prettier": "^2.1.2",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "del": "^5.1.0"
   }
 }
