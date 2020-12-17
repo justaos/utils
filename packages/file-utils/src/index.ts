@@ -20,8 +20,8 @@ export default class FileUtils {
     jsonfile.writeFileSync(filePath, object, { spaces: 2 });
   }
 
-  static writeFileSync(filePath: string, str: string) {
-    fs.writeFileSync(filePath, str);
+  static writeFileSync(filePath: string, contentm: string) {
+    fs.writeFileSync(filePath, content);
   }
 
   static readFileSync(filePath: string, options?: any): Buffer {
