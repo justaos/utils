@@ -1,0 +1,55 @@
+{
+  "name": "@p4rm/ds-utils",
+  "version": "1.1.1",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "private": false,
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "gulp | tsc",
+    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "test": "nyc mocha test/unit/**/*.test.ts"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "nyc": {
+    "check-coverage": false,
+    "all": true,
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/**.interface.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "docs/reports/coverage"
+  },
+  "dependencies": {
+    "fs-extra": "8.1.0",
+    "glob": "^7.1.6",
+    "jsonfile": "5.0.0",
+    "del": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "@types/jsonfile": "^5.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

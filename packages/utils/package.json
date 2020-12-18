@@ -16,7 +16,8 @@
   ],
   "dependencies": {
     "@p4rm/file-utils": "^1.1.1",
-    "@p4rm/logger-utils": "^1.1.1"
+    "@p4rm/logger-utils": "^1.1.1",
+    "@p4rm/ds-utils": "^1.1.1"
   },
   "keywords": [],
   "author": "",
