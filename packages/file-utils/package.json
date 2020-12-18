@@ -1,6 +1,6 @@
 {
   "name": "@p4rm/file-utils",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -40,10 +40,10 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
+    "del": "^5.1.0",
     "fs-extra": "8.1.0",
     "glob": "^7.1.6",
-    "jsonfile": "5.0.0",
-    "del": "^5.1.0"
+    "jsonfile": "5.0.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.0",
