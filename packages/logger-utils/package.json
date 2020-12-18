@@ -1,6 +1,6 @@
 {
   "name": "@p4rm/logger-utils",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -41,7 +41,6 @@
   "dependencies": {
     "winston": "^3.3.3"
   },
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
