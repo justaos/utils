@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "prepare": "npm run build",
-    "postinstall": "npm run bootstrap",
     "bootstrap": "lerna bootstrap --no-ci --hoist",
     "build": "lerna run build",
+    "postinstall": "npm run bootstrap",
+    "prepare": "npm run build",
     "publish": "lerna publish"
   },
   "devDependencies": {
-    "lerna": "^3.22.1",
-    "typescript": "^4.0.3",
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
     "@types/node": "^14.11.10",
+    "chai": "^4.2.0",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "del": "^5.1.0"
+    "lerna": "^3.22.1",
+    "mocha": "^8.1.1",
+    "typescript": "^4.0.3",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0"
   }
 }

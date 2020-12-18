@@ -6,9 +6,12 @@
   "typings": "lib/index.d.ts",
   "private": false,
   "scripts": {
-    "build": "gulp | tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp | tsc"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "dependencies": {
     "@p4rm/file-utils": "1.0.2"
   },

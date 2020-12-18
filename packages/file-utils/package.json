@@ -7,7 +7,35 @@
   "private": false,
   "scripts": {
     "build": "gulp | tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "test": "nyc mocha test/unit/**/*.test.ts"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "nyc": {
+    "check-coverage": false,
+    "all": true,
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/**.interface.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
     "fs-extra": "8.1.0",
