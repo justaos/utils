@@ -6,7 +6,8 @@
   "typings": "lib/index.d.ts",
   "private": false,
   "scripts": {
-    "build": "gulp | tsc"
+    "build": "gulp | tsc",
+    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md"
   },
   "files": [
     "lib",

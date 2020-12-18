@@ -1,5 +1,5 @@
 {
-  "name": "@p4rm/file-utils",
+  "name": "@p4rm/logger-utils",
   "version": "1.0.4",
   "description": "",
   "main": "lib/index.js",
@@ -39,16 +39,10 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
-    "fs-extra": "8.1.0",
-    "glob": "^7.1.6",
-    "jsonfile": "5.0.0"
+    "winston": "^3.3.3"
   },
-  "devDependencies": {
-    "@types/fs-extra": "^8.0.0",
-    "@types/jsonfile": "^5.0.0"
-  },
+  "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "gitHead": "5efc0c2d436a92e52a941c25501fd9ab2ba04c2c"
+  "license": "ISC"
 }
