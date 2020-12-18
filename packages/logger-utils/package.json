@@ -6,6 +6,7 @@
   "typings": "lib/index.d.ts",
   "private": false,
   "scripts": {
+    "prepare": "npm run build",
     "build": "gulp | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx",
@@ -43,5 +44,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "d771e90d6db3f3833cb362be5bab86a65ccec761"
 }

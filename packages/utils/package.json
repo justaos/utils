@@ -6,6 +6,7 @@
   "typings": "lib/index.d.ts",
   "private": false,
   "scripts": {
+    "prepare": "npm run build",
     "build": "gulp | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md"
   },
@@ -14,9 +15,11 @@
     "src"
   ],
   "dependencies": {
-    "@p4rm/file-utils": "^1.1.0"
+    "@p4rm/file-utils": "^1.1.0",
+    "@p4rm/logger-utils": "^1.1.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "d771e90d6db3f3833cb362be5bab86a65ccec761"
 }
