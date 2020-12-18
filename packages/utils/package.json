@@ -1,6 +1,6 @@
 {
   "name": "@p4rm/utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -15,8 +15,8 @@
     "src"
   ],
   "dependencies": {
-    "@p4rm/file-utils": "^1.1.0",
-    "@p4rm/logger-utils": "^1.1.0"
+    "@p4rm/file-utils": "^1.1.1",
+    "@p4rm/logger-utils": "^1.1.1"
   },
   "keywords": [],
   "author": "",
