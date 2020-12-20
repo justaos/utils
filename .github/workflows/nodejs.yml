@@ -23,9 +23,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: lerna bootstrap and test
         run: |
-          lerna bootstrap --ci
+          npm run bootstrap
           npm run lint --if-present
-          lerna run test
+          npm run test --if-present
         env:
           CI: true
       - name: Coveralls

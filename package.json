@@ -5,6 +5,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci --hoist",
     "build": "lerna run build",
+    "test": "lerna run test",
     "lint": "eslint ./packages --ext .ts,.tsx",
     "postinstall": "npm run bootstrap",
     "prepare": "npm run build",
