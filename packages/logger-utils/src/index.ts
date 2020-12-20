@@ -7,11 +7,11 @@ export default class Logger {
   constructor(options: any = {}) {
     options = {
       ...{ label: '' },
-      ...options,
+      ...options
     };
 
     const loggerOptions: any = {
-      transports: [],
+      transports: []
     };
 
     const customLogFormat = winston.format.printf((info: any) => {
@@ -29,8 +29,8 @@ export default class Logger {
         label,
         timestamp,
         winston.format.colorize(),
-        customLogFormat,
-      ),
+        customLogFormat
+      )
     });
     loggerOptions.transports.push(console);
 
@@ -38,12 +38,16 @@ export default class Logger {
       const file = new winston.transports.File({
         filename: options.filePath,
         level: 'silly',
-        format: winston.format.combine(label, timestamp, customLogFormat),
+        format: winston.format.combine(label, timestamp, customLogFormat)
       });
       loggerOptions.transports.push(file);
     }
 
     this.logger = winston.createLogger(loggerOptions);
+  }
+
+  static createLogger(options: any = {}) {
+    return new Logger(options);
   }
 
   log(...args: any): any {
@@ -73,9 +77,4 @@ export default class Logger {
   logError(err: Error): any {
     return this.log({ level: 'error', message: err });
   }
-
-  static createLogger(options: any = {}) {
-    return new Logger(options);
-  }
-
 }

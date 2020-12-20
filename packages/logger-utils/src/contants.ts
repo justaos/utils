@@ -4,5 +4,5 @@ export const LEVELS = {
   INFO: 'info', // 2
   VERBOSE: 'verbose', // 3
   DEBUG: 'debug', // 4
-  SILLY: 'silly', // 5
+  SILLY: 'silly' // 5
 };

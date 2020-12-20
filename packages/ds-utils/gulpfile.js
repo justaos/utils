@@ -1,9 +1,9 @@
-const del = require('del');
+const del = require("del");
 
 function cleanOutput() {
-    return del([
-        'lib/'
-    ]);
+  return del([
+    "lib/"
+  ]);
 }
 
 exports.default = cleanOutput;
