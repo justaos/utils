@@ -25,7 +25,7 @@ jobs:
         run: |
           npm ci
           npm run bootstrap
-          npm run lint --if-present
+#          npm run lint --if-present
           npm run test --if-present
         env:
           CI: true
