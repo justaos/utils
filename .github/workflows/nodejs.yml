@@ -28,9 +28,22 @@ jobs:
           npm run test --if-present
         env:
           CI: true
-      - name: Publish
-      - uses: smartlyio/lerna-publish-action@v2
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
-          bump: major
-        env:
-            token: ${{ secrets.NPM_TOKEN }}
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+
+      - run: npm ci
+
+      - id: publish
+      - uses: smartlyio/lerna-publish-action@v2
+      with:
+        bump: major
+      env:
+        token: ${{ secrets.NPM_TOKEN }}
