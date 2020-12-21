@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "bootstrap": "lerna bootstrap --no-ci --hoist",
-    "bootstrap-ci": "lerna bootstrap --ci",
+    "bootstrap": "lerna bootstrap --ci",
     "build": "lerna run build",
     "test": "lerna run test",
     "lint": "eslint ./packages --ext .ts,.tsx",
