@@ -10,7 +10,7 @@
     "postinstall": "npm run bootstrap",
     "prepare": "npm run build",
     "publish-canary": "lerna publish --canary patch --yes",
-    "publish-major": "lerna publish minor --yes",
+    "publish-patch": "lerna publish patch --yes",
     "generate-docs": "lerna run generate-docs"
   },
   "devDependencies": {
