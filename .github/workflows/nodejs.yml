@@ -43,7 +43,7 @@ jobs:
 
       - id: publish
       - uses: smartlyio/lerna-publish-action@v2
-      with:
-        bump: major
-      env:
-        token: ${{ secrets.NPM_TOKEN }}
+        with:
+          bump: major
+        env:
+          token: ${{ secrets.NPM_TOKEN }}
