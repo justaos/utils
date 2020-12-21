@@ -28,8 +28,4 @@ jobs:
           npm run test --if-present
         env:
           CI: true
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          package: ./utils
-          token: ${{ secrets.NPM_TOKEN }}
 
