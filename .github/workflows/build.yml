@@ -24,7 +24,7 @@ jobs:
       - name: build and test
         run: |
           npm ci
-          npm run bootstrap-ci
+          npm run bootstrap
           npm run test --if-present
         env:
           CI: true
