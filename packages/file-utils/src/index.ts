@@ -29,7 +29,7 @@ export default class FileUtils {
     return fs.readFileSync(filePath, options);
   }
 
-  static delete(patterns: any) {
+  static delete(patterns: any): Promise<any> {
     return del(patterns);
   }
 
