@@ -39,11 +39,11 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
 
-      - run: npm ci
-
-      - id: publish
+      - name: Publish
+          run: |
+            npm install
       - uses: smartlyio/lerna-publish-action@v2
         with:
           bump: major
         env:
-          token: ${{ secrets.NPM_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
