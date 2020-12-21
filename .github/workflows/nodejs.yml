@@ -24,26 +24,12 @@ jobs:
       - name: build and test
         run: |
           npm ci
-          npm run bootstrap
+          npm run bootstrap-ci
           npm run test --if-present
         env:
           CI: true
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: JS-DevTools/npm-publish@v1
         with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
+          package: ./utils
+          token: ${{ secrets.NPM_TOKEN }}
 
-      - name: Publish
-        run: |
-          npm install
-      - uses: smartlyio/lerna-publish-action@v2
-        with:
-          bump: major
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

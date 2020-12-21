@@ -4,6 +4,7 @@
   "private": false,
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci --hoist",
+    "bootstrap-ci": "lerna bootstrap --ci",
     "build": "lerna run build",
     "test": "lerna run test",
     "lint": "eslint ./packages --ext .ts,.tsx",
