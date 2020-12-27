@@ -1,4 +1,4 @@
-export default class DSUtils {
+export default class CommonUtils {
   static underscoreToCamelCase(input: string): string {
     input = input.charAt(0).toUpperCase() + input.substr(1);
     input = input.replace(/_(.)/g, (match, letter) => {
