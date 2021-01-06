@@ -1,6 +1,6 @@
 {
   "name": "@p4rm/email-utils",
-  "version": "1.2.2",
+  "version": "1.4.0",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -42,15 +42,15 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
+    "@p4rm/logger-utils": "^1.4.0",
     "imap": "0.8.19",
-    "@p4rm/logger-utils": "^1.2.2",
-    "nodemailer": "6.4.14",
-    "mailparser": "2.8.1"
+    "mailparser": "2.8.1",
+    "nodemailer": "6.4.14"
   },
   "devDependencies": {
     "@types/imap": "^0.8.31",
-    "@types/nodemailer": "^6.4.0",
-    "@types/mailparser": "^2.7.3"
+    "@types/mailparser": "^2.7.3",
+    "@types/nodemailer": "^6.4.0"
   },
   "keywords": [],
   "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com>",
