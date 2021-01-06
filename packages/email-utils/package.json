@@ -1,6 +1,6 @@
 {
-  "name": "@p4rm/file-utils",
-  "version": "1.3.0",
+  "name": "@p4rm/email-utils",
+  "version": "1.2.2",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -9,16 +9,15 @@
     "prepare": "npm run build",
     "build": "gulp | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
-    "lint": "eslint ./src --ext .ts,.tsx",
-    "test": "nyc mocha test/unit/**/*.test.ts"
+    "lint": "eslint ./src --ext .ts,.tsx"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "lib",
     "src"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "nyc": {
     "check-coverage": false,
     "all": true,
@@ -43,14 +42,15 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
-    "del": "^5.1.0",
-    "fs-extra": "8.1.0",
-    "glob": "^7.1.6",
-    "jsonfile": "5.0.0"
+    "imap": "0.8.19",
+    "@p4rm/logger-utils": "^1.2.2",
+    "nodemailer": "6.4.14",
+    "mailparser": "2.8.1"
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.0.0",
-    "@types/jsonfile": "^5.0.0"
+    "@types/imap": "^0.8.31",
+    "@types/nodemailer": "^6.4.0",
+    "@types/mailparser": "^2.7.3"
   },
   "keywords": [],
   "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com>",

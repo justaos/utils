@@ -12,6 +12,9 @@
     "lint": "eslint ./src --ext .ts,.tsx",
     "test": "nyc mocha test/unit/**/*.test.ts"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "lib",
     "src"

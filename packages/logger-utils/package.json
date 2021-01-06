@@ -11,6 +11,9 @@
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "lib",
     "src"
@@ -42,7 +45,7 @@
     "winston": "^3.3.3"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Shivaji Varma <contact@shivajivarma.com>",
+  "license": "Apache-2.0",
   "gitHead": "b331036d49aa204185847fe97d23f3a249ef9bc8"
 }
