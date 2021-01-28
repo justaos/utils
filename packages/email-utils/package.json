@@ -1,6 +1,6 @@
 {
   "name": "@p4rm/email-utils",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -45,8 +45,8 @@
     "@p4rm/logger-utils": "^1.4.0",
     "imap": "0.8.19",
     "mailparser": "2.8.1",
-    "nodemailer": "6.4.14",
-    "node-email-reply-parser": "^0.1.1"
+    "node-email-reply-parser": "^0.1.1",
+    "nodemailer": "6.4.14"
   },
   "devDependencies": {
     "@types/imap": "^0.8.31",
