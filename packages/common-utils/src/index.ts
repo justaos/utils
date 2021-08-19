@@ -10,9 +10,7 @@ export default class CommonUtils {
   static hasDuplicates(a: string[]): boolean {
     for (let i = 0; i <= a.length; i++) {
       for (let j = i; j <= a.length; j++) {
-        if (i != j && a[i] == a[j]) {
-          return true;
-        }
+        if (i != j && a[i] == a[j]) return true;
       }
     }
     return false;
@@ -23,13 +21,13 @@ export default class CommonUtils {
     // JS by default uses a crappy string compare.
     // (we use slice to clone the array so the
     // original array won't be modified)
-    const results = [];
+    const results = new Map();
     for (let i = 0; i < sortedArray.length - 1; i++) {
       if (sortedArray[i + 1] === sortedArray[i]) {
-        results.push(sortedArray[i]);
+        results.set(sortedArray[i], true);
       }
     }
-    return results;
+    return Array.from(results.keys());
   }
 
   static flatToHierarchy(flat: any[]): any[] {

@@ -1,4 +1,11 @@
-# P4RM string and array utils
+# P4RM File utils
 
-Common string and array utility functions used across P4RM projects.
+Common file utility functions used across P4RM projects.
 
+```js
+let CommonUtils = require('../lib').default;
+
+const result = CommonUtils.underscoreToCamelCase('hello_world');
+console.log(result); // Hello World
+
+```
