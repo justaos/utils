@@ -8,7 +8,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "gulp | tsc",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md"
+    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > ../../README.md"
   },
   "files": [
     "lib",

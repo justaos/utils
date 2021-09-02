@@ -9,7 +9,8 @@ Common utility functions used across P4RM projects.
 ## File Utils
 
 ```js
-// ../file-utils/examples/readFile.js#L3-L4
+const obj = FileUtils.readJsonFileSync("../test/resources/sample.json");
+console.log(JSON.stringify(obj, null, 4)); // prints content of sample.json
 ```
 
 ## String Utils
@@ -26,4 +27,4 @@ console.log(temp); // prints 'Hello World'
 
 ## License
 
-[Apache License 2.0](/LICENSE)
+[Apache License 2.0](LICENSE)
