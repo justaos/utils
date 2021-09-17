@@ -1,0 +1,39 @@
+{
+  "scriptId": "90",
+  "url": "file:///D:/development/p4rm/@p4rm/utils/hash-utils/src/main.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 1292,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "generateHash",
+      "ranges": [
+        {
+          "startOffset": 81,
+          "endOffset": 168,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "validateHash",
+      "ranges": [
+        {
+          "startOffset": 180,
+          "endOffset": 267,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scriptId": "96",
+  "url": "https://deno.land/x/bcrypt@v0.2.4/mod.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 567,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

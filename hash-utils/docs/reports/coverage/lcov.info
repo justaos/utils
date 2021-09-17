@@ -18,7 +18,7 @@ DA:3,1
 LH:2
 LF:2
 end_of_record
-SF:D:\development\p4rm\@p4rm\utils\hash-utils\src\main.ts
+SF:D:\development\p4rm\@p4rm\utils\hash-utils\src\index.ts
 FN:5,generateHash
 FN:9,validateHash
 FNDA:1,generateHash

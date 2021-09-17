@@ -1,3 +1,3 @@
-import CommonUtils from "./src/main.ts";
+import CommonUtils from './src/index.ts';
 
 export default CommonUtils;
