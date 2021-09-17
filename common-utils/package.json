@@ -1,0 +1,11 @@
+{
+  "name": "common-utils",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "deno test --coverage=docs/reports/coverage",
+    "coverage": "deno coverage docs/reports/coverage/ --lcov > docs/reports/coverage/lcov.info"
+
+  },
+  "dependencies": {
+  }
+}

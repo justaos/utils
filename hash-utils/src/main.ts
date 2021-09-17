@@ -1,11 +1,11 @@
-import * as bcrypt from 'bcryptjs';
+import { hash, verify } from "../deps.ts";
 
 export default class HashUtils {
   static generateHash(data: string): string {
-    return bcrypt.hashSync(data, bcrypt.genSaltSync(8));
+    return hash(data);
   }
 
   static validateHash(data: string, dataHash: string): boolean {
-    return bcrypt.compareSync(data, dataHash);
+    return verify(data, dataHash);
   }
 }
