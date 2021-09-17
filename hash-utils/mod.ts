@@ -1,3 +1,3 @@
-import CommonUtils from "./src/main.ts";
+import HashUtils from "./src/main.ts";
 
-export default CommonUtils;
+export default HashUtils;

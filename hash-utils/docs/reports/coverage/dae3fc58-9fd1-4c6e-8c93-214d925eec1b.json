@@ -1,0 +1,17 @@
+{
+  "scriptId": "92",
+  "url": "file:///D:/development/p4rm/@p4rm/utils/hash-utils/deps.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 509,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

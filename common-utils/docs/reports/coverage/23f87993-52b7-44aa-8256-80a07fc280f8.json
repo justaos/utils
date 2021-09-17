@@ -1,0 +1,17 @@
+{
+  "scriptId": "81",
+  "url": "file:///D:/development/p4rm/@p4rm/utils/common-utils/ea38e875-240e-4d87-901e-82c4d9871021$deno$test.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 80,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "scriptId": "102",
+  "url": "https://deno.land/x/bcrypt@v0.2.4/src/bcrypt/base64.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 13664,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "encode",
+      "ranges": [
+        {
+          "startOffset": 1157,
+          "endOffset": 1891,
+          "count": 7
+        },
+        {
+          "startOffset": 1271,
+          "endOffset": 1865,
+          "count": 48
+        },
+        {
+          "startOffset": 1406,
+          "endOffset": 1481,
+          "count": 4
+        },
+        {
+          "startOffset": 1481,
+          "endOffset": 1640,
+          "count": 44
+        },
+        {
+          "startOffset": 1640,
+          "endOffset": 1715,
+          "count": 3
+        },
+        {
+          "startOffset": 1715,
+          "endOffset": 1865,
+          "count": 41
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "char64",
+      "ranges": [
+        {
+          "startOffset": 1892,
+          "endOffset": 2178,
+          "count": 66
+        },
+        {
+          "startOffset": 1935,
+          "endOffset": 1998,
+          "count": 0
+        },
+        {
+          "startOffset": 2125,
+          "endOffset": 2135,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "decode",
+      "ranges": [
+        {
+          "startOffset": 2186,
+          "endOffset": 3181,
+          "count": 3
+        },
+        {
+          "startOffset": 2363,
+          "endOffset": 2398,
+          "count": 0
+        },
+        {
+          "startOffset": 2425,
+          "endOffset": 2442,
+          "count": 18
+        },
+        {
+          "startOffset": 2444,
+          "endOffset": 3066,
+          "count": 18
+        },
+        {
+          "startOffset": 2570,
+          "endOffset": 2576,
+          "count": 0
+        },
+        {
+          "startOffset": 2679,
+          "endOffset": 2693,
+          "count": 15
+        },
+        {
+          "startOffset": 2707,
+          "endOffset": 2713,
+          "count": 3
+        },
+        {
+          "startOffset": 2713,
+          "endOffset": 2787,
+          "count": 15
+        },
+        {
+          "startOffset": 2787,
+          "endOffset": 2793,
+          "count": 0
+        },
+        {
+          "startOffset": 2793,
+          "endOffset": 2919,
+          "count": 15
+        },
+        {
+          "startOffset": 2933,
+          "endOffset": 2939,
+          "count": 0
+        },
+        {
+          "startOffset": 2939,
+          "endOffset": 3066,
+          "count": 15
+        },
+        {
+          "startOffset": 3144,
+          "endOffset": 3163,
+          "count": 48
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}
