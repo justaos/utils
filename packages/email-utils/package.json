@@ -7,7 +7,7 @@
   "private": false,
   "scripts": {
     "prepare": "npm run build",
-    "build": "gulp | tsc",
+    "build": "node ./clean.js | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx"
   },
@@ -46,7 +46,7 @@
     "imap": "0.8.19",
     "mailparser": "2.8.1",
     "node-email-reply-parser": "^0.1.1",
-    "nodemailer": "6.4.14"
+    "nodemailer": "^6.6.5"
   },
   "devDependencies": {
     "@types/imap": "^0.8.31",

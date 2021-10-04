@@ -7,7 +7,7 @@
   "private": false,
   "scripts": {
     "prepare": "npm run build",
-    "build": "gulp | tsc",
+    "build": "node ./clean.js | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx"
   },
