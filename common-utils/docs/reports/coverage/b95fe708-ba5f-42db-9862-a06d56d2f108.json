@@ -1,0 +1,143 @@
+{
+  "scriptId": "90",
+  "url": "file:///D:/development/p4rm/@p4rm/utils/common-utils/src/index.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 6597,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "underscoreToCamelCase",
+      "ranges": [
+        {
+          "startOffset": 46,
+          "endOffset": 306,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 181,
+          "endOffset": 258,
+          "count": 3
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "hasDuplicates",
+      "ranges": [
+        {
+          "startOffset": 318,
+          "endOffset": 561,
+          "count": 2
+        },
+        {
+          "startOffset": 381,
+          "endOffset": 533,
+          "count": 4
+        },
+        {
+          "startOffset": 431,
+          "endOffset": 523,
+          "count": 8
+        },
+        {
+          "startOffset": 460,
+          "endOffset": 475,
+          "count": 4
+        },
+        {
+          "startOffset": 497,
+          "endOffset": 509,
+          "count": 1
+        },
+        {
+          "startOffset": 523,
+          "endOffset": 533,
+          "count": 3
+        },
+        {
+          "startOffset": 533,
+          "endOffset": 560,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "findDuplicates",
+      "ranges": [
+        {
+          "startOffset": 573,
+          "endOffset": 917,
+          "count": 1
+        },
+        {
+          "startOffset": 735,
+          "endOffset": 868,
+          "count": 5
+        },
+        {
+          "startOffset": 792,
+          "endOffset": 858,
+          "count": 3
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "flatToHierarchy",
+      "ranges": [
+        {
+          "startOffset": 929,
+          "endOffset": 1496,
+          "count": 1
+        },
+        {
+          "startOffset": 1125,
+          "endOffset": 1468,
+          "count": 5
+        },
+        {
+          "startOffset": 1192,
+          "endOffset": 1241,
+          "count": 2
+        },
+        {
+          "startOffset": 1241,
+          "endOffset": 1458,
+          "count": 3
+        },
+        {
+          "startOffset": 1389,
+          "endOffset": 1405,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 1024,
+          "endOffset": 1078,
+          "count": 5
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

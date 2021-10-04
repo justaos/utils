@@ -1,0 +1,63 @@
+{
+  "scriptId": "74",
+  "url": "deno:runtime/js/40_write_file.js",
+  "functions": [
+    {
+      "functionName": "writeFileSync",
+      "ranges": [
+        {
+          "startOffset": 359,
+          "endOffset": 1239,
+          "count": 2
+        },
+        {
+          "startOffset": 450,
+          "endOffset": 459,
+          "count": 0
+        },
+        {
+          "startOffset": 461,
+          "endOffset": 548,
+          "count": 0
+        },
+        {
+          "startOffset": 587,
+          "endOffset": 721,
+          "count": 0
+        },
+        {
+          "startOffset": 768,
+          "endOffset": 813,
+          "count": 0
+        },
+        {
+          "startOffset": 958,
+          "endOffset": 988,
+          "count": 0
+        },
+        {
+          "startOffset": 989,
+          "endOffset": 1020,
+          "count": 0
+        },
+        {
+          "startOffset": 1027,
+          "endOffset": 1071,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "writeTextFileSync",
+      "ranges": [
+        {
+          "startOffset": 2193,
+          "endOffset": 2370,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

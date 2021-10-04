@@ -1,0 +1,186 @@
+{
+  "scriptId": "107",
+  "url": "https://deno.land/std@0.109.0/fs/walk.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 17665,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "_createWalkEntrySync",
+      "ranges": [
+        {
+          "startOffset": 112,
+          "endOffset": 401,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "_createWalkEntry",
+      "ranges": [
+        {
+          "startOffset": 409,
+          "endOffset": 702,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "include",
+      "ranges": [
+        {
+          "startOffset": 703,
+          "endOffset": 1041,
+          "count": 4
+        },
+        {
+          "startOffset": 760,
+          "endOffset": 802,
+          "count": 0
+        },
+        {
+          "startOffset": 804,
+          "endOffset": 833,
+          "count": 0
+        },
+        {
+          "startOffset": 848,
+          "endOffset": 898,
+          "count": 3
+        },
+        {
+          "startOffset": 900,
+          "endOffset": 929,
+          "count": 1
+        },
+        {
+          "startOffset": 929,
+          "endOffset": 991,
+          "count": 3
+        },
+        {
+          "startOffset": 993,
+          "endOffset": 1022,
+          "count": 0
+        },
+        {
+          "startOffset": 1022,
+          "endOffset": 1040,
+          "count": 3
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 774,
+          "endOffset": 801,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 863,
+          "endOffset": 897,
+          "count": 3
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 956,
+          "endOffset": 990,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "wrapErrorWithRootPath",
+      "ranges": [
+        {
+          "startOffset": 1042,
+          "endOffset": 1468,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "walk",
+      "ranges": [
+        {
+          "startOffset": 1476,
+          "endOffset": 2883,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "walkSync",
+      "ranges": [
+        {
+          "startOffset": 2891,
+          "endOffset": 4226,
+          "count": 1
+        },
+        {
+          "startOffset": 3091,
+          "endOffset": 3114,
+          "count": 0
+        },
+        {
+          "startOffset": 3172,
+          "endOffset": 3221,
+          "count": 0
+        },
+        {
+          "startOffset": 3290,
+          "endOffset": 3313,
+          "count": 0
+        },
+        {
+          "startOffset": 3393,
+          "endOffset": 3471,
+          "count": 0
+        },
+        {
+          "startOffset": 3505,
+          "endOffset": 4224,
+          "count": 2
+        },
+        {
+          "startOffset": 3615,
+          "endOffset": 3781,
+          "count": 0
+        },
+        {
+          "startOffset": 3943,
+          "endOffset": 4218,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

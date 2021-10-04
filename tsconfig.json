@@ -1,23 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "types/*"
-      ]
-    },
-    "target": "es2016",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./lib",
-    "strict": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "pretty": true,
-    "inlineSources": true
-  },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+    "plugins": [{
+      "name": "typescript-deno-plugin",
+      "enable": true,
+      "importmap": "import_map.json"
+    }]
+  }
 }

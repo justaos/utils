@@ -1,0 +1,179 @@
+{
+  "scriptId": "122",
+  "url": "https://deno.land/std@0.109.0/path/_util.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 13748,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "assertPath",
+      "ranges": [
+        {
+          "startOffset": 165,
+          "endOffset": 324,
+          "count": 40
+        },
+        {
+          "startOffset": 227,
+          "endOffset": 322,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isPosixPathSeparator",
+      "ranges": [
+        {
+          "startOffset": 332,
+          "endOffset": 411,
+          "count": 741
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isPathSeparator",
+      "ranges": [
+        {
+          "startOffset": 419,
+          "endOffset": 524,
+          "count": 741
+        },
+        {
+          "startOffset": 490,
+          "endOffset": 521,
+          "count": 716
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isWindowsDeviceRoot",
+      "ranges": [
+        {
+          "startOffset": 532,
+          "endOffset": 705,
+          "count": 18
+        },
+        {
+          "startOffset": 607,
+          "endOffset": 634,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "normalizeString",
+      "ranges": [
+        {
+          "startOffset": 713,
+          "endOffset": 3174,
+          "count": 14
+        },
+        {
+          "startOffset": 949,
+          "endOffset": 3156,
+          "count": 652
+        },
+        {
+          "startOffset": 984,
+          "endOffset": 1010,
+          "count": 638
+        },
+        {
+          "startOffset": 1010,
+          "endOffset": 1121,
+          "count": 14
+        },
+        {
+          "startOffset": 1063,
+          "endOffset": 1069,
+          "count": 0
+        },
+        {
+          "startOffset": 1157,
+          "endOffset": 3019,
+          "count": 86
+        },
+        {
+          "startOffset": 1195,
+          "endOffset": 1208,
+          "count": 85
+        },
+        {
+          "startOffset": 1210,
+          "endOffset": 1225,
+          "count": 1
+        },
+        {
+          "startOffset": 1225,
+          "endOffset": 2960,
+          "count": 85
+        },
+        {
+          "startOffset": 1282,
+          "endOffset": 2690,
+          "count": 0
+        },
+        {
+          "startOffset": 2766,
+          "endOffset": 2814,
+          "count": 71
+        },
+        {
+          "startOffset": 2814,
+          "endOffset": 2891,
+          "count": 14
+        },
+        {
+          "startOffset": 3019,
+          "endOffset": 3150,
+          "count": 566
+        },
+        {
+          "startOffset": 3055,
+          "endOffset": 3069,
+          "count": 4
+        },
+        {
+          "startOffset": 3071,
+          "endOffset": 3102,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "_format",
+      "ranges": [
+        {
+          "startOffset": 3182,
+          "endOffset": 3488,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "encodeWhitespace",
+      "ranges": [
+        {
+          "startOffset": 3656,
+          "endOffset": 3793,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": false
+    }
+  ]
+}

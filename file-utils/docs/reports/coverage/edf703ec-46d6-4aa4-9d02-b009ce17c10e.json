@@ -1,0 +1,28 @@
+{
+  "scriptId": "20",
+  "url": "deno:ext/web/08_text_encoding.js",
+  "functions": [
+    {
+      "functionName": "TextEncoder",
+      "ranges": [
+        {
+          "startOffset": 3587,
+          "endOffset": 3649,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "encode",
+      "ranges": [
+        {
+          "startOffset": 3855,
+          "endOffset": 4279,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

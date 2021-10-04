@@ -1,0 +1,64 @@
+{
+  "scriptId": "57",
+  "url": "deno:runtime/js/12_io.js",
+  "functions": [
+    {
+      "functionName": "readSync",
+      "ranges": [
+        {
+          "startOffset": 1921,
+          "endOffset": 2111,
+          "count": 12
+        },
+        {
+          "startOffset": 1983,
+          "endOffset": 2006,
+          "count": 0
+        },
+        {
+          "startOffset": 2092,
+          "endOffset": 2098,
+          "count": 6
+        },
+        {
+          "startOffset": 2099,
+          "endOffset": 2106,
+          "count": 6
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "writeSync",
+      "ranges": [
+        {
+          "startOffset": 2332,
+          "endOffset": 2419,
+          "count": 2
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "readAllSync",
+      "ranges": [
+        {
+          "startOffset": 3426,
+          "endOffset": 4035,
+          "count": 6
+        },
+        {
+          "startOffset": 3494,
+          "endOffset": 3735,
+          "count": 12
+        },
+        {
+          "startOffset": 3616,
+          "endOffset": 3729,
+          "count": 6
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}
