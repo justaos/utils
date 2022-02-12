@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@p4rm/common-utils": "^1.5.0",
-    "@p4rm/email-utils": "^1.4.3",
     "@p4rm/file-utils": "^1.5.0",
     "@p4rm/hash-utils": "^1.4.3",
     "@p4rm/logger-utils": "^1.5.0"
