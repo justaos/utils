@@ -24,5 +24,6 @@ jobs:
       - name: publish
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
+          npm ci
           npm bootstrap
           npm run publish
