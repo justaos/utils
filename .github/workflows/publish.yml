@@ -1,14 +1,14 @@
-name: Node Publish CI
+name: Publish
 
 on:
-  push:
-    # Sequence of patterns matched against refs/heads
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
 
 jobs:
-  build:
-
+  publish:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -24,5 +24,5 @@ jobs:
       - name: publish
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
-          npm ci
+          npm bootstrap
           npm run publish

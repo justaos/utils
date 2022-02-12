@@ -10,6 +10,7 @@
     "build": "node ./clean.js | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx",
+    "coverage": "nyc report --reporter=text-lcov",
     "test": "nyc mocha test/unit/**/*.test.ts"
   },
   "publishConfig": {

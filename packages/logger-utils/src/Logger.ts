@@ -2,7 +2,6 @@ import * as winston from 'winston';
 import { LEVELS } from './contants';
 
 export default class Logger {
-
   readonly #logger: winston.Logger;
 
   constructor(options: any = {}) {
