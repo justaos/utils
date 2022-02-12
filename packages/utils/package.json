@@ -1,6 +1,6 @@
 {
   "name": "@p4rm/utils",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -18,11 +18,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@p4rm/common-utils": "^1.4.3",
+    "@p4rm/common-utils": "^1.5.0",
     "@p4rm/email-utils": "^1.4.3",
-    "@p4rm/file-utils": "^1.4.3",
+    "@p4rm/file-utils": "^1.5.0",
     "@p4rm/hash-utils": "^1.4.3",
-    "@p4rm/logger-utils": "^1.4.3"
+    "@p4rm/logger-utils": "^1.5.0"
   },
   "keywords": [],
   "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com>",
