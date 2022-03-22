@@ -1,10 +1,10 @@
-# P4RM's Utils
+# justaos's Utils
 
-Common utility functions used across P4RM projects.
+Common utility functions used across projects.
 
-[![Version](https://img.shields.io/npm/v/@p4rm/utils)](https://img.shields.io/npm/v/@p4rm/utils)
-[![Build](https://github.com/p4rm/utils/workflows/Node%20Build%20CI/badge.svg)](https://github.com/p4rm/utils/actions?workflow=Node+CI)
-[![Coverage Status](https://coveralls.io/repos/github/p4rm/utils/badge.svg?branch=master)](https://coveralls.io/github/p4rm/utils?branch=master)
+[![Version](https://img.shields.io/npm/v/@justaos/utils)](https://img.shields.io/npm/v/@justaos/utils)
+[![Build](https://github.com/justaos/utils/workflows/Node%20Build%20CI/badge.svg)](https://github.com/justaos/utils/actions?workflow=Node+CI)
+[![Coverage Status](https://coveralls.io/repos/github/justaos/utils/badge.svg?branch=master)](https://coveralls.io/github/justaos/utils?branch=master)
 
 ## File Utils
 
@@ -16,8 +16,8 @@ console.log(JSON.stringify(obj, null, 4)); // prints content of sample.json
 ## String Utils
 
 ```js
-const {DSUtils} = require('@p4rm/utils');
-const temp = DSUtils.underscoreToCamelCase('hello_world');
+const {CommonUtils} = require('@justaos/utils');
+const temp = CommonUtils.underscoreToCamelCase('hello_world');
 console.log(temp); // prints 'Hello World'
 ```
 
@@ -27,4 +27,4 @@ console.log(temp); // prints 'Hello World'
 
 ## License
 
-[Apache License 2.0](LICENSE)
+[Apache License 2.0](/LICENSE)

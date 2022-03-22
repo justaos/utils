@@ -1,27 +1,33 @@
 {
-  "name": "@p4rm/hash-utils",
-  "version": "1.4.3",
-  "description": "> TODO: description",
-  "homepage": "https://github.com/p4rm/utils#readme",
-  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com>",
+  "name": "@justaos/hash-utils",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Hash utilities",
+  "keywords": [
+    "justaos",
+    "hash",
+    "utils"
+  ],
+  "homepage": "https://justaos.com",
+  "bugs": {
+    "url": "https://github.com/justaos/utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justaos/utils.git"
+  },
   "license": "Apache-2.0",
+  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com> (https://shivajivarma.com)",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
     "src"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/p4rm/utils.git"
-  },
   "scripts": {
-    "prepare": "npm run build",
     "build": "node ./clean.js | tsc",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md"
-  },
-  "publishConfig": {
-    "access": "public"
+    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3"
@@ -29,7 +35,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2"
   },
-  "bugs": {
-    "url": "https://github.com/p4rm/utils/issues"
+  "publishConfig": {
+    "access": "public"
   }
 }

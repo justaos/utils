@@ -1,51 +1,63 @@
 {
-  "name": "@p4rm/logger-utils",
-  "version": "1.5.0",
-  "description": "",
+  "name": "@justaos/logger-utils",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Logger utilities",
+  "keywords": [
+    "justaos",
+    "logger",
+    "utils"
+  ],
+  "homepage": "https://justaos.com",
+  "bugs": {
+    "url": "https://github.com/justaos/utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justaos/utils.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com> (https://shivajivarma.com)",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "private": false,
-  "scripts": {
-    "prepare": "npm run build",
-    "build": "node ./clean.js | tsc",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
-    "lint": "eslint ./src --ext .ts,.tsx"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "lib",
     "src"
   ],
+  "scripts": {
+    "build": "node ./clean.js | tsc",
+    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "prepare": "npm run build"
+  },
   "nyc": {
-    "check-coverage": false,
     "all": true,
+    "check-coverage": false,
+    "exclude": [
+      "**/**.interface.ts"
+    ],
     "extension": [
       ".ts"
     ],
     "include": [
       "src/**/*.ts"
     ],
-    "exclude": [
-      "**/**.interface.ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
+    "report-dir": "docs/reports/coverage",
     "reporter": [
       "html",
       "lcov",
       "text",
       "text-summary"
     ],
-    "report-dir": "docs/reports/coverage"
+    "require": [
+      "ts-node/register"
+    ]
   },
   "dependencies": {
     "winston": "^3.3.3"
   },
-  "keywords": [],
-  "author": "Shivaji Varma <contact@shivajivarma.com>",
-  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "b331036d49aa204185847fe97d23f3a249ef9bc8"
 }
