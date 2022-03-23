@@ -1,6 +1,6 @@
 {
   "name": "@justaos/utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Common utilities",
   "keywords": [
     "justaos",
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@justaos/common-utils": "^1.0.3",
-    "@justaos/date-utils": "^1.0.4",
+    "@justaos/date-utils": "^1.0.5",
     "@justaos/file-utils": "^1.0.3",
     "@justaos/hash-utils": "^1.0.3",
     "@justaos/logger-utils": "^1.0.3"
