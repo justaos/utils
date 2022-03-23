@@ -25,9 +25,7 @@
     "src"
   ],
   "scripts": {
-    "build": "node ./clean.js | tsc",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
-    "prepare": "npm run build"
+    "build": "node ./clean.js | tsc"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3"

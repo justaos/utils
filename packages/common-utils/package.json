@@ -29,9 +29,7 @@
   "scripts": {
     "build": "node ./clean.js | tsc",
     "coverage": "nyc report --reporter=text-lcov",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "prepare": "npm run build",
     "test": "nyc mocha test/unit/**/*.test.ts"
   },
   "nyc": {

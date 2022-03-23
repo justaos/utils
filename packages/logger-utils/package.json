@@ -26,9 +26,7 @@
   ],
   "scripts": {
     "build": "node ./clean.js | tsc",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
-    "lint": "eslint ./src --ext .ts,.tsx",
-    "prepare": "npm run build"
+    "lint": "eslint ./src --ext .ts,.tsx"
   },
   "nyc": {
     "all": true,

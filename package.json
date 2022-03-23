@@ -12,13 +12,11 @@
     "prepare": "npm run build",
     "patch": "lerna version patch --yes",
     "minor": "lerna version minor --yes",
-    "publish": "lerna publish from-package --yes",
-    "generate-docs": "lerna run generate-docs"
+    "publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "@justaos/dev-dependencies": "^1.0.3",
     "del": "^6.0.0",
-    "embedme": "^1.22.0",
     "lerna": "^4.0.0"
   }
 }
