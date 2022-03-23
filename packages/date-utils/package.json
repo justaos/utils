@@ -2,10 +2,10 @@
   "name": "@justaos/date-utils",
   "version": "1.0.4",
   "private": false,
-  "description": "File utilities",
+  "description": "Date utilities",
   "keywords": [
     "justaos",
-    "file",
+    "date",
     "utils"
   ],
   "homepage": "https://justaos.com",
