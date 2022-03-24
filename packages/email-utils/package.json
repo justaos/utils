@@ -1,7 +1,7 @@
 {
   "name": "@justaos/email-utils",
   "version": "1.0.6",
-  "description": "",
+  "description": "Email utilities",
   "homepage": "https://justaos.com",
   "bugs": {
     "url": "https://github.com/justaos/utils/issues"
