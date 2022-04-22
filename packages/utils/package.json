@@ -1,6 +1,6 @@
 {
   "name": "@justaos/utils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Common utilities",
   "keywords": [
     "justaos",
@@ -31,11 +31,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@justaos/common-utils": "^1.0.7",
-    "@justaos/date-utils": "^1.0.7",
-    "@justaos/file-utils": "^1.0.7",
-    "@justaos/hash-utils": "^1.0.7",
-    "@justaos/logger-utils": "^1.0.7"
+    "@justaos/common-utils": "^1.0.8",
+    "@justaos/date-utils": "^1.0.8",
+    "@justaos/file-utils": "^1.0.8",
+    "@justaos/hash-utils": "^1.0.8",
+    "@justaos/logger-utils": "^1.0.8"
   },
   "gitHead": "365b4a0cf79505659f8df50343d7d2625205f1a1"
 }
