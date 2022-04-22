@@ -1,6 +1,6 @@
 {
   "name": "@justaos/common-utils",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "private": false,
   "description": "Common string and array utilities",
   "keywords": [

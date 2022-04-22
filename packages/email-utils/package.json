@@ -52,7 +52,7 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
-    "@justaos/logger-utils": "^1.0.7",
+    "@justaos/logger-utils": "1.0.7",
     "imap": "0.8.19",
     "mailparser": "2.8.1",
     "node-email-reply-parser": "^0.1.1",
@@ -64,5 +64,5 @@
     "@types/nodemailer": "^6.4.0"
   },
   "keywords": [],
-  "gitHead": "b331036d49aa204185847fe97d23f3a249ef9bc8"
+  "gitHead": "365b4a0cf79505659f8df50343d7d2625205f1a1"
 }
