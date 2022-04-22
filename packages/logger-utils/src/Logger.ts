@@ -6,7 +6,7 @@ export default class Logger {
 
   constructor(options: any = {}) {
     options = {
-      ...{ label: '' },
+      ...{ label: '',  level: LEVELS.INFO },
       ...options
     };
 
@@ -24,7 +24,7 @@ export default class Logger {
     const timestamp = winston.format.timestamp();
 
     const console = new winston.transports.Console({
-      level: LEVELS.INFO,
+      level: options.level,
       format: winston.format.combine(
         label,
         timestamp,
@@ -37,7 +37,7 @@ export default class Logger {
     if (options.filePath) {
       const file = new winston.transports.File({
         filename: options.filePath,
-        level: 'silly',
+        level: LEVELS.SILLY,
         format: winston.format.combine(label, timestamp, customLogFormat)
       });
       loggerOptions.transports.push(file);
