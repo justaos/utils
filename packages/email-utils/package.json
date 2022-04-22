@@ -1,6 +1,6 @@
 {
   "name": "@justaos/email-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Email utilities",
   "homepage": "https://justaos.com",
   "bugs": {
@@ -52,7 +52,7 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
-    "@justaos/logger-utils": "^1.0.3",
+    "@justaos/logger-utils": "^1.0.7",
     "imap": "0.8.19",
     "mailparser": "2.8.1",
     "node-email-reply-parser": "^0.1.1",

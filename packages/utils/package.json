@@ -1,6 +1,6 @@
 {
   "name": "@justaos/utils",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Common utilities",
   "keywords": [
     "justaos",
@@ -35,7 +35,7 @@
     "@justaos/date-utils": "^1.0.5",
     "@justaos/file-utils": "^1.0.3",
     "@justaos/hash-utils": "^1.0.3",
-    "@justaos/logger-utils": "^1.0.3"
+    "@justaos/logger-utils": "^1.0.7"
   },
   "gitHead": "b331036d49aa204185847fe97d23f3a249ef9bc8"
 }
