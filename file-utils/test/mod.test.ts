@@ -15,6 +15,10 @@ describe('file-utils', function() {
     if (!FileUtils.existsSync(dir)) {
       FileUtils.mkdirSync(dir);
     }
+    const copyDir = `${TEST_RESOURCES_PATH}/copy`;
+    if (FileUtils.existsSync(copyDir)) {
+      FileUtils.remove(copyDir, { recursive: true });
+    }
   });
 
   afterAll(function() {
@@ -52,15 +56,14 @@ describe('file-utils', function() {
   it('#remove()', function() {
     const dir = `${TEST_RESOURCES_PATH}/_temp_`;
     FileUtils.removeSync(dir, { recursive: true });
-
     assertEquals(FileUtils.existsSync(dir), false);
   });
 
-  /* it('#copySync()', function() {
+   it('#copySync()', function() {
      FileUtils.copySync(TEST_RESOURCES_PATH + '/path', TEST_RESOURCES_PATH + '/copy');
-     let objs = FileUtils.readJsonFilesFromPathSync(TEST_RESOURCES_PATH + '/copy/!**.json');
+     let objs = FileUtils.readJsonFilesFromPathSync(TEST_RESOURCES_PATH + '/copy/**.json');
      assertEquals(objs[0].title, 'a');
      assertEquals(objs[1].title, 'b');
-   });*/
+   });
 
 });

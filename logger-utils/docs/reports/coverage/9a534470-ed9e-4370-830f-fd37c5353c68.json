@@ -1,0 +1,16 @@
+{
+  "scriptId": "97",
+  "url": "https://rymbxfxhuz2ounj2witgbci2f6arhb3gnyiudl22cru23qr4kufq.arweave.net/jhgbluemdOo1OrImYIkaL4ETh2ZuEUGvWhRprcI8VQs/src/lib/prefix/prefixes/NoPrefix.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 955, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "NoPrefix",
+      "ranges": [{ "startOffset": 82, "endOffset": 122, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "scriptId": "95",
+  "url": "https://rymbxfxhuz2ounj2witgbci2f6arhb3gnyiudl22cru23qr4kufq.arweave.net/jhgbluemdOo1OrImYIkaL4ETh2ZuEUGvWhRprcI8VQs/src/lib/prefix/Prefix.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 1646, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 7, "endOffset": 239, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "Prefix",
+      "ranges": [{ "startOffset": 42, "endOffset": 111, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "setPrefix",
+      "ranges": [{ "startOffset": 116, "endOffset": 181, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "getPrefix",
+      "ranges": [{ "startOffset": 186, "endOffset": 237, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

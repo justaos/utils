@@ -1,0 +1,24 @@
+{
+  "scriptId": "93",
+  "url": "https://rymbxfxhuz2ounj2witgbci2f6arhb3gnyiudl22cru23qr4kufq.arweave.net/jhgbluemdOo1OrImYIkaL4ETh2ZuEUGvWhRprcI8VQs/src/lib/transport/transports/ConsoleTransport.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 7297, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "log",
+      "ranges": [
+        { "startOffset": 181, "endOffset": 1944, "count": 1 },
+        { "startOffset": 253, "endOffset": 1938, "count": 4 },
+        { "startOffset": 317, "endOffset": 355, "count": 1 },
+        { "startOffset": 373, "endOffset": 1938, "count": 1 },
+        { "startOffset": 424, "endOffset": 1346, "count": 0 },
+        { "startOffset": 1550, "endOffset": 1586, "count": 0 },
+        { "startOffset": 1779, "endOffset": 1863, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

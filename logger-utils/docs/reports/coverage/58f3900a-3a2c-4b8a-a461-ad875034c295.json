@@ -1,0 +1,39 @@
+{
+  "scriptId": "96",
+  "url": "https://rymbxfxhuz2ounj2witgbci2f6arhb3gnyiudl22cru23qr4kufq.arweave.net/jhgbluemdOo1OrImYIkaL4ETh2ZuEUGvWhRprcI8VQs/src/lib/prefix/prefixes/TimePrefix.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 4386, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 94, "endOffset": 987, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "TimePrefix",
+      "ranges": [{ "startOffset": 148, "endOffset": 299, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "getTime",
+      "ranges": [
+        { "startOffset": 304, "endOffset": 893, "count": 2 },
+        { "startOffset": 631, "endOffset": 737, "count": 0 },
+        { "startOffset": 750, "endOffset": 775, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "beautify",
+      "ranges": [
+        { "startOffset": 898, "endOffset": 985, "count": 10 },
+        { "startOffset": 944, "endOffset": 958, "count": 4 },
+        { "startOffset": 959, "endOffset": 978, "count": 6 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scriptId": "80",
+  "url": "file:///D:/development/justaos/@justaos/utils/file-utils/mod.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 440, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "scriptId": "98",
+  "url": "https://rymbxfxhuz2ounj2witgbci2f6arhb3gnyiudl22cru23qr4kufq.arweave.net/jhgbluemdOo1OrImYIkaL4ETh2ZuEUGvWhRprcI8VQs/src/lib/prefix/prefixes/TextPrefix.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 1015, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "TextPrefix",
+      "ranges": [{ "startOffset": 84, "endOffset": 134, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

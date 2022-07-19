@@ -1,0 +1,11 @@
+{
+  "scriptId": "84",
+  "url": "https://deno.land/x/test_suite@v0.8.0/deps.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 1198, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

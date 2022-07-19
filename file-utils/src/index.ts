@@ -1,4 +1,4 @@
-import { existsSync, expandGlobSync } from 'https://deno.land/std/fs/mod.ts';
+import { existsSync, expandGlobSync, copy, copySync } from 'https://deno.land/std@0.95.0/fs/mod.ts';
 import MkdirOptions from './MkdirOptions.ts';
 import RemoveOptions from './RemoveOptions.ts';
 
@@ -61,13 +61,11 @@ export default class FileUtils {
     Deno.writeTextFileSync(filePath, content);
   }
 
-  /*
-    static delete(patterns: any): Promise<any> {
-      return del(patterns);
-    }
-  */
+  static copy(sourcePath: string, destinationPath: string) {
+    copy(sourcePath, destinationPath);
+  }
 
   static copySync(sourcePath: string, destinationPath: string) {
-    // fs.copySync(sourcePath, destinationPath);
+    copySync(sourcePath, destinationPath);
   }
 }

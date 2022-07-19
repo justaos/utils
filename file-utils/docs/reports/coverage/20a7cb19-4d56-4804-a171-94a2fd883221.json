@@ -1,0 +1,19 @@
+{
+  "scriptId": "71",
+  "url": "deno:runtime/js/40_write_file.js",
+  "functions": [
+    {
+      "functionName": "writeFileSync",
+      "ranges": [
+        { "startOffset": 244, "endOffset": 547, "count": 2 },
+        { "startOffset": 330, "endOffset": 346, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "writeTextFileSync",
+      "ranges": [{ "startOffset": 1353, "endOffset": 1530, "count": 2 }],
+      "isBlockCoverage": true
+    }
+  ]
+}
