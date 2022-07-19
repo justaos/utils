@@ -1,7 +1,7 @@
 import * as nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 import Imap from 'imap';
-import Logger from '@p4rm/logger-utils';
+import { Logger } from '@justaos/logger-utils';
 import { simpleParser } from 'mailparser';
 // @ts-ignore
 import replyParser from 'node-email-reply-parser';
@@ -13,8 +13,8 @@ export class EmailSendHandler {
     this.#transport = nodemailer.createTransport(config);
   }
 
-  sendMail(mailOptions: any, callback: any) {
-    this.#transport.sendMail(mailOptions, callback);
+  async sendMail(mailOptions: any) {
+    return this.#transport.sendMail(mailOptions);
   }
 }
 

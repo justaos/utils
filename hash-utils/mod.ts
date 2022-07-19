@@ -1,3 +1,3 @@
-import HashUtils from "./src/index.ts";
+import HashUtils from "./src/HashUtils.ts";
 
 export default HashUtils;

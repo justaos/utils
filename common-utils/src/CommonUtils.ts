@@ -1,7 +1,7 @@
 export default class CommonUtils {
   static underscoreToCamelCase(input: string): string {
     input = input.charAt(0).toUpperCase() + input.substr(1);
-    input = input.replace(/_(.)/g, (match, letter) => {
+    input = input.replace(/_(.)/g, (match: string, letter) => {
       return ` ${letter.toUpperCase()}`;
     });
     return input.replace('_', ' ');
@@ -30,7 +30,7 @@ export default class CommonUtils {
     return Array.from(results.keys());
   }
 
-  static flatToHierarchy(flat: any[]): any[] {
+  static flatToHierarchy(flat: {}[]): any[] {
     const roots: any[] = []; // things without parent
     const all: any = {};
 

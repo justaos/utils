@@ -1,13 +1,23 @@
 {
-  "name": "@p4rm/email-utils",
-  "version": "1.4.1",
-  "description": "",
+  "name": "@justaos/email-utils",
+  "version": "1.0.8",
+  "description": "Email utilities",
+  "homepage": "https://justaos.com",
+  "bugs": {
+    "url": "https://github.com/justaos/utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justaos/utils.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com> (https://shivajivarma.com)",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "private": false,
   "scripts": {
     "prepare": "npm run build",
-    "build": "gulp | tsc",
+    "build": "node ./clean.js | tsc",
     "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
     "lint": "eslint ./src --ext .ts,.tsx"
   },
@@ -42,11 +52,11 @@
     "report-dir": "docs/reports/coverage"
   },
   "dependencies": {
-    "@p4rm/logger-utils": "^1.4.0",
+    "@justaos/logger-utils": "^1.0.8",
     "imap": "0.8.19",
     "mailparser": "2.8.1",
     "node-email-reply-parser": "^0.1.1",
-    "nodemailer": "6.4.14"
+    "nodemailer": "^6.6.5"
   },
   "devDependencies": {
     "@types/imap": "^0.8.31",
@@ -54,7 +64,5 @@
     "@types/nodemailer": "^6.4.0"
   },
   "keywords": [],
-  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com>",
-  "license": "Apache-2.0",
-  "gitHead": "b331036d49aa204185847fe97d23f3a249ef9bc8"
+  "gitHead": "365b4a0cf79505659f8df50343d7d2625205f1a1"
 }
