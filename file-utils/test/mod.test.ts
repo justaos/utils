@@ -1,11 +1,9 @@
 import { assertEquals } from 'https://deno.land/std@0.107.0/testing/asserts.ts';
 import { afterAll, beforeAll, describe, it } from 'https://deno.land/x/test_suite@v0.8.0/mod.ts';
 import FileUtils from '../mod.ts';
-import dirname from 'https://x.nest.land/denoname@0.8.2/mod/dirname.ts';
 
-const __dirname = dirname(import.meta);
 
-const TEST_RESOURCES_PATH = __dirname + 'resources';
+const TEST_RESOURCES_PATH = './test/resources';
 
 
 describe('file-utils', function() {
@@ -13,7 +11,7 @@ describe('file-utils', function() {
   beforeAll(function() {
     const dir = `${TEST_RESOURCES_PATH}/_temp_`;
     if (!FileUtils.existsSync(dir)) {
-      FileUtils.mkdirSync(dir);
+      FileUtils.mkdirSync(dir, { recursive: true });
     }
     const copyDir = `${TEST_RESOURCES_PATH}/copy`;
     if (FileUtils.existsSync(copyDir)) {
