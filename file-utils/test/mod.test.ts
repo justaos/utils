@@ -5,7 +5,7 @@ import dirname from 'https://x.nest.land/denoname@0.8.2/mod/dirname.ts';
 
 const __dirname = dirname(import.meta);
 
-const TEST_RESOURCES_PATH = __dirname + '/resources';
+const TEST_RESOURCES_PATH = __dirname + 'resources';
 
 
 describe('file-utils', function() {
