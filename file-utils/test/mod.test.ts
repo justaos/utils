@@ -9,18 +9,21 @@ const TEST_RESOURCES_PATH = './test/resources';
 describe('file-utils', function() {
 
   beforeAll(function() {
-    const dir = `${TEST_RESOURCES_PATH}/_temp_`;
-    if (!FileUtils.existsSync(dir)) {
-      FileUtils.mkdirSync(dir, { recursive: true });
+    const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
+    if (!FileUtils.existsSync(tempDir)) {
+      FileUtils.mkdirSync(tempDir, { recursive: true });
+    }
+  });
+
+  afterAll(function() {
+    const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
+    if (FileUtils.existsSync(tempDir)) {
+      FileUtils.remove(tempDir, { recursive: true });
     }
     const copyDir = `${TEST_RESOURCES_PATH}/copy`;
     if (FileUtils.existsSync(copyDir)) {
       FileUtils.remove(copyDir, { recursive: true });
     }
-  });
-
-  afterAll(function() {
-
   });
 
   it('#readTextFileSync()', function() {
