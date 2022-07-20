@@ -1,0 +1,95 @@
+{
+  "scriptId": "95",
+  "url": "https://deno.land/x/bcrypt@v0.2.4/src/bcrypt/bcrypt.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 77650, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "encipher",
+      "ranges": [
+        { "startOffset": 17114, "endOffset": 17719, "count": 802395 },
+        { "startOffset": 17281, "endOffset": 17650, "count": 6419160 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "streamtoword",
+      "ranges": [
+        { "startOffset": 17720, "endOffset": 17962, "count": 30828 },
+        { "startOffset": 17829, "endOffset": 17924, "count": 123312 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "init_key",
+      "ranges": [{ "startOffset": 17963, "endOffset": 18034, "count": 3 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "key",
+      "ranges": [
+        { "startOffset": 18035, "endOffset": 18492, "count": 1536 },
+        { "startOffset": 18221, "endOffset": 18260, "count": 27648 },
+        { "startOffset": 18295, "endOffset": 18375, "count": 13824 },
+        { "startOffset": 18410, "endOffset": 18490, "count": 786432 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "ekskey",
+      "ranges": [
+        { "startOffset": 18493, "endOffset": 19176, "count": 3 },
+        { "startOffset": 18729, "endOffset": 18768, "count": 54 },
+        { "startOffset": 18803, "endOffset": 18971, "count": 27 },
+        { "startOffset": 19006, "endOffset": 19174, "count": 1536 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "crypt_raw",
+      "ranges": [
+        { "startOffset": 19177, "endOffset": 20049, "count": 3 },
+        { "startOffset": 19368, "endOffset": 19424, "count": 0 },
+        { "startOffset": 19504, "endOffset": 19539, "count": 0 },
+        { "startOffset": 19619, "endOffset": 19668, "count": 768 },
+        { "startOffset": 19698, "endOffset": 19782, "count": 192 },
+        { "startOffset": 19752, "endOffset": 19776, "count": 576 },
+        { "startOffset": 19857, "endOffset": 20031, "count": 18 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "hashpw",
+      "ranges": [
+        { "startOffset": 20057, "endOffset": 21544, "count": 3 },
+        { "startOffset": 20304, "endOffset": 20360, "count": 0 },
+        { "startOffset": 20401, "endOffset": 20409, "count": 0 },
+        { "startOffset": 20603, "endOffset": 20668, "count": 0 },
+        { "startOffset": 20736, "endOffset": 20775, "count": 0 },
+        { "startOffset": 20967, "endOffset": 20971, "count": 0 },
+        { "startOffset": 21284, "endOffset": 21347, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "gensalt",
+      "ranges": [
+        { "startOffset": 21552, "endOffset": 21995, "count": 1 },
+        { "startOffset": 21803, "endOffset": 21870, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "checkpw",
+      "ranges": [
+        { "startOffset": 22003, "endOffset": 22407, "count": 2 },
+        { "startOffset": 22251, "endOffset": 22264, "count": 0 },
+        { "startOffset": 22329, "endOffset": 22383, "count": 120 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scriptId": "79",
+  "url": "file:///D:/development/justaos/@justaos/utils/logger-utils/mod.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 648, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

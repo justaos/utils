@@ -1,22 +1,8 @@
 {
-  "name": "root",
-  "version": "1.0.2",
-  "private": true,
-  "scripts": {
-    "bootstrap": "lerna bootstrap --ci",
-    "bootstrap:install": "lerna bootstrap --no-ci",
-    "build": "lerna run build",
-    "test": "lerna run test",
-    "lint": "eslint ./packages --ext .ts,.tsx",
-    "postinstall": "npm run bootstrap",
-    "prepare": "npm run build",
-    "patch": "lerna version patch --yes",
-    "minor": "lerna version minor --yes",
-    "publish": "lerna publish from-package --yes"
-  },
+  "name": "@justaos/utils",
+  "version": "1.1.0",
   "devDependencies": {
-    "@justaos/dev-dependencies": "^1.0.3",
-    "del": "^6.0.0",
-    "lerna": "^4.0.0"
+    "typescript": "^4.4.3",
+    "typescript-deno-plugin": "^1.31.0"
   }
 }
