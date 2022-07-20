@@ -1,4 +1,6 @@
 {
+  "name": "@justaos/utils",
+  "version": "1.1.0",
   "devDependencies": {
     "typescript": "^4.4.3",
     "typescript-deno-plugin": "^1.31.0"
