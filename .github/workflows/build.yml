@@ -26,6 +26,12 @@ jobs:
           deno --version
           cd common-utils
           deno test --coverage=docs/reports/coverage --allow-net --unstable
+          cd ../logger-utils
+          deno test --coverage=docs/reports/coverage --allow-net --unstable
+          cd ../hash-utils
+          deno test --coverage=docs/reports/coverage --allow-net --unstable
+          cd ../file-utils
+          deno test --coverage=docs/reports/coverage --allow-net --unstable
         env:
           CI: true
 
