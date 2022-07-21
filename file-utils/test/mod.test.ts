@@ -1,10 +1,11 @@
+import * as path from "https://deno.land/std@0.57.0/path/mod.ts";
 import { assertEquals } from 'https://deno.land/std@0.107.0/testing/asserts.ts';
 import { afterAll, beforeAll, describe, it } from 'https://deno.land/x/test_suite@v0.8.0/mod.ts';
 import FileUtils from '../mod.ts';
 
 
-const TEST_RESOURCES_PATH = './test/resources';
-
+const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
+const TEST_RESOURCES_PATH =path.normalize(__dirname + '/resources');
 
 describe('file-utils', function() {
 

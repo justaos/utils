@@ -1,0 +1,21 @@
+{
+  "scriptId": "104",
+  "url": "https://deno.land/std@0.95.0/fs/ensure_file.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 6352, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "ensureFile",
+      "ranges": [{ "startOffset": 497, "endOffset": 1090, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "ensureFileSync",
+      "ranges": [{ "startOffset": 1368, "endOffset": 1953, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}
