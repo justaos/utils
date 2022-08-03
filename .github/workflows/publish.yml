@@ -1,4 +1,4 @@
-name: Publish
+name: "github-release"
 
 on:
   workflow_run:
@@ -8,27 +8,16 @@ on:
 
 jobs:
 
-  publish-prerelease:
+  prerelease:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        deno-version: [ 1.23.4 ]
+    name: "Github Release"
+    runs-on: "ubuntu-latest"
 
     steps:
-      - uses: actions/checkout@v2.3.2
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          # fetch full history so things like auto-changelog work properly
-          fetch-depth: 0
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: publish
-        run: |
-          npm config set '//npm.justaos.com/:_authToken' "${{ secrets.JUSTAOS_NPM_TOKEN }}"
-          npm config set @p4:registry https://npm.justaos.com
-          npm ci
-          npm run bootstrap
-          npm run publish
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          files: |
+            *
