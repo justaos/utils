@@ -65,7 +65,7 @@ export default class FileUtils {
     copy(sourcePath, destinationPath);
   }
 
-  static copySync(sourcePath: string, destinationPath: string, options: any) {
+  static copySync(sourcePath: string, destinationPath: string, options?: any) {
     copySync(sourcePath, destinationPath, options);
   }
 }
