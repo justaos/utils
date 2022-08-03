@@ -1,4 +1,4 @@
-import { existsSync, expandGlobSync, copy, copySync } from 'https://deno.land/std@0.95.0/fs/mod.ts';
+import { copy, copySync, existsSync, expandGlobSync } from 'https://deno.land/std@0.95.0/fs/mod.ts';
 import MkdirOptions from './MkdirOptions.ts';
 import RemoveOptions from './RemoveOptions.ts';
 
@@ -65,7 +65,7 @@ export default class FileUtils {
     copy(sourcePath, destinationPath);
   }
 
-  static copySync(sourcePath: string, destinationPath: string) {
-    copySync(sourcePath, destinationPath);
+  static copySync(sourcePath: string, destinationPath: string, options: any) {
+    copySync(sourcePath, destinationPath, options);
   }
 }
