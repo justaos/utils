@@ -1,0 +1,46 @@
+{
+  "scriptId": "21",
+  "url": "deno:ext/web/08_text_encoding.js",
+  "functions": [
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 832, "endOffset": 4275, "count": 1 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "TextDecoder",
+      "ranges": [{ "startOffset": 1119, "endOffset": 1671, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "get encoding",
+      "ranges": [{ "startOffset": 1706, "endOffset": 1813, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "get fatal",
+      "ranges": [{ "startOffset": 1849, "endOffset": 1950, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "get ignoreBOM",
+      "ranges": [{ "startOffset": 1986, "endOffset": 2095, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "decode",
+      "ranges": [{ "startOffset": 2196, "endOffset": 4271, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "TextEncoder",
+      "ranges": [{ "startOffset": 4400, "endOffset": 4462, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "encode",
+      "ranges": [{ "startOffset": 4677, "endOffset": 5110, "count": 27 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

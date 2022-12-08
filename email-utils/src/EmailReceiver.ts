@@ -1,33 +1,20 @@
-import * as nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
-import Imap from 'imap';
-import { Logger } from '@justaos/logger-utils';
-import { simpleParser } from 'mailparser';
-// @ts-ignore
-import replyParser from 'node-email-reply-parser';
+import Imap from 'npm:imap@0.8.19';
 
-export class EmailSendHandler {
-  #transport: Mail;
+import { Logger } from '../deps.ts';
+import * as mailparser from 'npm:mailparser';
+import replyParser from 'npm:node-email-reply-parser';
 
-  constructor(config: any) {
-    this.#transport = nodemailer.createTransport(config);
-  }
-
-  async sendMail(mailOptions: any) {
-    return this.#transport.sendMail(mailOptions);
-  }
-}
 
 export function parseReply(mailText: string): string {
   return replyParser(mailText, true);
 }
 
 export function parseMail(buffer: string): Promise<any> {
-  return simpleParser(buffer);
+  return mailparser.simpleParser(buffer);
 }
 
-export class EmailReceiveHandler {
-  #imap: Imap;
+export default class EmailReceiveHandler {
+  #imap: any;
 
   constructor(config: any) {
     this.#imap = new Imap(config);
@@ -39,7 +26,7 @@ export class EmailReceiveHandler {
 
     this.#imap.once('ready', () => {
       emailReceiverLogger.info('IMAP receiver ready');
-      this.#imap.openBox('INBOX', true, (err, box) => {
+      this.#imap.openBox('INBOX', true, (err: any, box: any) => {
         totalMessagesInInbox = box.messages.total;
         emailReceiverLogger.info(
           `Total Inbox Messages [${totalMessagesInInbox}]`
@@ -59,29 +46,29 @@ export class EmailReceiveHandler {
 
       totalMessagesInInbox = totalMessagesInInbox + numNewMsgs;
 
-      fetch.on('message', (message, seqno) => {
-        message.on('body', function (stream, info) {
+      fetch.on('message', (message: any, seqno: any) => {
+        message.on('body', function(stream: any, info: any) {
           let buffer = '';
-          stream.on('data', function (chunk) {
+          stream.on('data', function(chunk: any) {
             buffer += chunk.toString();
           });
-          stream.once('end', function () {
+          stream.once('end', function() {
             resolve({ buffer, seqno });
           });
         });
       });
 
-      fetch.once('error', function (err: Error) {
+      fetch.once('error', function(err: Error) {
         reject(err);
       });
     });
 
-    this.#imap.on('error', function (err: Error) {
+    this.#imap.on('error', function(err: Error) {
       reject(err);
-      emailReceiverLogger.logError(err);
+      emailReceiverLogger.error(err);
     });
 
-    this.#imap.on('end', function () {
+    this.#imap.on('end', function() {
       emailReceiverLogger.info('Connection ended');
     });
 
@@ -105,3 +92,4 @@ export class EmailReceiveHandler {
 const emailReceiverLogger = Logger.createLogger({
   label: EmailReceiveHandler.name
 });
+

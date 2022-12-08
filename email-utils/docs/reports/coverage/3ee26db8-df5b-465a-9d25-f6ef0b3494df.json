@@ -1,0 +1,11 @@
+{
+  "scriptId": "54",
+  "url": "deno:runtime/js/01_errors.js",
+  "functions": [
+    {
+      "functionName": "TimedOut",
+      "ranges": [{ "startOffset": 1650, "endOffset": 1722, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

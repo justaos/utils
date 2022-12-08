@@ -1,0 +1,11 @@
+{
+  "scriptId": "87",
+  "url": "https://deno.land/x/denomailer@1.2.0/mod.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 128, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

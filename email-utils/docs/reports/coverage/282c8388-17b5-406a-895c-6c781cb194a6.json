@@ -1,0 +1,66 @@
+{
+  "scriptId": "109",
+  "url": "https://deno.land/std@0.142.0/io/buffer.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 32939, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 1123, "endOffset": 8516, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 8683, "endOffset": 8878, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 8886, "endOffset": 9065, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 9132, "endOffset": 22901, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 22902, "endOffset": 23447, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 23816, "endOffset": 26602, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 26986, "endOffset": 29778, "count": 0 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "createLPS",
+      "ranges": [{ "startOffset": 29845, "endOffset": 30283, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readDelim",
+      "ranges": [{ "startOffset": 30334, "endOffset": 31977, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readStringDelim",
+      "ranges": [{ "startOffset": 32030, "endOffset": 32321, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readLines",
+      "ranges": [{ "startOffset": 32377, "endOffset": 32938, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

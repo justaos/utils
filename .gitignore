@@ -92,6 +92,7 @@ nbproject
 .node_history
 dump.rdb
 
+.temp
 npm-debug.log
 lib-cov
 *.seed

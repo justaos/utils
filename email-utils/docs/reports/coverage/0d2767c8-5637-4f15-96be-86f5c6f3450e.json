@@ -1,0 +1,26 @@
+{
+  "scriptId": "101",
+  "url": "https://deno.land/x/denomailer@1.2.0/config/client.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 946, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "resolveClientOptions",
+      "ranges": [
+        { "startOffset": 7, "endOffset": 945, "count": 1 },
+        { "startOffset": 106, "endOffset": 111, "count": 0 },
+        { "startOffset": 161, "endOffset": 176, "count": 0 },
+        { "startOffset": 221, "endOffset": 231, "count": 0 },
+        { "startOffset": 278, "endOffset": 290, "count": 0 },
+        { "startOffset": 424, "endOffset": 461, "count": 0 },
+        { "startOffset": 590, "endOffset": 779, "count": 0 },
+        { "startOffset": 845, "endOffset": 854, "count": 0 },
+        { "startOffset": 905, "endOffset": 920, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

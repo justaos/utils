@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Deno: mod.test.ts" type="DenoConfigurationType" nameIsGenerated="true" inputPath="$PROJECT_DIR$/email-utils/test/.temp/mod.test.ts" programParameters="test --allow-all" workingDirectory="$PROJECT_DIR$/email-utils/test/.temp">
+    <method v="2" />
+  </configuration>
+</component>

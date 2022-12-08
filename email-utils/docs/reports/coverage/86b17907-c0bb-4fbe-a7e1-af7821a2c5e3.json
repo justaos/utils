@@ -1,0 +1,34 @@
+{
+  "scriptId": "95",
+  "url": "https://deno.land/x/denomailer@1.2.0/config/mail/encoding.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 1830, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "quotedPrintableEncode",
+      "ranges": [
+        { "startOffset": 324, "endOffset": 1829, "count": 2 },
+        { "startOffset": 1266, "endOffset": 1736, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        { "startOffset": 559, "endOffset": 1124, "count": 27 },
+        { "startOffset": 804, "endOffset": 859, "count": 0 },
+        { "startOffset": 861, "endOffset": 910, "count": 0 },
+        { "startOffset": 920, "endOffset": 1123, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 971, "endOffset": 1096, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

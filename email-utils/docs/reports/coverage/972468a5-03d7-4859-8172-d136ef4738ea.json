@@ -1,0 +1,24 @@
+{
+  "scriptId": "80",
+  "url": "file:///D:/development/justaos/@justaos/utils/email-utils/test/mod.test.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 719, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 142, "endOffset": 716, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        { "startOffset": 178, "endOffset": 712, "count": 1 },
+        { "startOffset": 706, "endOffset": 711, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

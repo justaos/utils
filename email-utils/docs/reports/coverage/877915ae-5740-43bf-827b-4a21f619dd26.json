@@ -1,0 +1,16 @@
+{
+  "scriptId": "95",
+  "url": "https://deno.land/x/denomailer@1.2.0/client/pool.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 465, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 56, "endOffset": 464, "count": 0 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

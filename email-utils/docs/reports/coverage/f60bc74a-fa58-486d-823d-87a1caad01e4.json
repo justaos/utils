@@ -1,0 +1,60 @@
+{
+  "scriptId": "101",
+  "url": "https://deno.land/x/denomailer@1.2.0/client/basic/connection.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 2917, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 113, "endOffset": 2916, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "SMTPConnection",
+      "ranges": [{ "startOffset": 188, "endOffset": 395, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "close",
+      "ranges": [{ "startOffset": 411, "endOffset": 547, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "setupConnection",
+      "ranges": [{ "startOffset": 552, "endOffset": 757, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "#connect",
+      "ranges": [
+        { "startOffset": 762, "endOffset": 1271, "count": 1 },
+        { "startOffset": 821, "endOffset": 1037, "count": 0 },
+        { "startOffset": 1214, "endOffset": 1270, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "assertCode",
+      "ranges": [{ "startOffset": 1276, "endOffset": 1491, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readCmd",
+      "ranges": [{ "startOffset": 1496, "endOffset": 2210, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "writeCmd",
+      "ranges": [{ "startOffset": 2215, "endOffset": 2555, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "writeCmdBinary",
+      "ranges": [{ "startOffset": 2560, "endOffset": 2902, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

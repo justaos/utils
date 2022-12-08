@@ -16,52 +16,11 @@
   "typings": "lib/index.d.ts",
   "private": false,
   "scripts": {
-    "prepare": "npm run build",
-    "build": "node ./clean.js | tsc",
-    "generate-docs": "embedme --stdout --strip-embed-comment README.template.md > README.md",
-    "lint": "eslint ./src --ext .ts,.tsx"
+    "test": "deno test --coverage=docs/reports/coverage --allow-net --unstable",
+    "coverage": "deno coverage docs/reports/coverage/ --lcov > docs/reports/coverage/lcov.info"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "files": [
-    "lib",
-    "src"
-  ],
-  "nyc": {
-    "check-coverage": false,
-    "all": true,
-    "extension": [
-      ".ts"
-    ],
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "**/**.interface.ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "html",
-      "lcov",
-      "text",
-      "text-summary"
-    ],
-    "report-dir": "docs/reports/coverage"
-  },
-  "dependencies": {
-    "@justaos/logger-utils": "^1.0.8",
-    "imap": "0.8.19",
-    "mailparser": "2.8.1",
-    "node-email-reply-parser": "^0.1.1",
-    "nodemailer": "^6.6.5"
-  },
-  "devDependencies": {
-    "@types/imap": "^0.8.31",
-    "@types/mailparser": "^2.7.3",
-    "@types/nodemailer": "^6.4.0"
   },
   "keywords": [],
   "gitHead": "365b4a0cf79505659f8df50343d7d2625205f1a1"

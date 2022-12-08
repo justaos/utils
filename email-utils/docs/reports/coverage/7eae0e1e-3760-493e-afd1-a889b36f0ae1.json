@@ -1,0 +1,35 @@
+{
+  "scriptId": "91",
+  "url": "https://deno.land/x/denomailer@1.2.0/client/mod.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 3622, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 767, "endOffset": 3621, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "SMTPHandler",
+      "ranges": [
+        { "startOffset": 1481, "endOffset": 2401, "count": 1 },
+        { "startOffset": 1712, "endOffset": 2218, "count": 0 },
+        { "startOffset": 2262, "endOffset": 2322, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "send",
+      "ranges": [{ "startOffset": 3117, "endOffset": 3478, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "close",
+      "ranges": [{ "startOffset": 3559, "endOffset": 3619, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

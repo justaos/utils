@@ -1,0 +1,16 @@
+{
+  "scriptId": "102",
+  "url": "https://deno.land/x/denomailer@1.2.0/config/mail/attachments.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 392, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "resolveAttachment",
+      "ranges": [{ "startOffset": 53, "endOffset": 391, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "scriptId": "87",
+  "url": "https://deno.land/x/test_suite@v0.8.0/describe.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 4772, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "areHooksLocked",
+      "ranges": [{ "startOffset": 75, "endOffset": 161, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "lockHooks",
+      "ranges": [
+        { "startOffset": 162, "endOffset": 340, "count": 1 },
+        { "startOffset": 219, "endOffset": 290, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "describe",
+      "ranges": [
+        { "startOffset": 393, "endOffset": 1517, "count": 1 },
+        { "startOffset": 526, "endOffset": 992, "count": 0 },
+        { "startOffset": 1042, "endOffset": 1065, "count": 0 },
+        { "startOffset": 1305, "endOffset": 1317, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "focusDescribe",
+      "ranges": [{ "startOffset": 1518, "endOffset": 1830, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "fdescribe",
+      "ranges": [{ "startOffset": 1831, "endOffset": 1899, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "xdescribe",
+      "ranges": [{ "startOffset": 1900, "endOffset": 1968, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "it",
+      "ranges": [
+        { "startOffset": 1969, "endOffset": 2693, "count": 1 },
+        { "startOffset": 2151, "endOffset": 2620, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "each",
+      "ranges": [{ "startOffset": 2694, "endOffset": 3336, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "focusIt",
+      "ranges": [{ "startOffset": 3337, "endOffset": 3637, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "fit",
+      "ranges": [{ "startOffset": 3638, "endOffset": 3694, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "xit",
+      "ranges": [{ "startOffset": 3695, "endOffset": 3751, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "setHook",
+      "ranges": [{ "startOffset": 3752, "endOffset": 4194, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "beforeEach",
+      "ranges": [{ "startOffset": 4262, "endOffset": 4320, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "afterEach",
+      "ranges": [{ "startOffset": 4390, "endOffset": 4446, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "beforeAll",
+      "ranges": [{ "startOffset": 4521, "endOffset": 4577, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "afterAll",
+      "ranges": [{ "startOffset": 4654, "endOffset": 4708, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

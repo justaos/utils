@@ -1,0 +1,21 @@
+{
+  "scriptId": "107",
+  "url": "https://deno.land/std@0.142.0/textproto/mod.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 4327, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "str",
+      "ranges": [{ "startOffset": 444, "endOffset": 509, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "<instance_members_initializer>",
+      "ranges": [{ "startOffset": 517, "endOffset": 4326, "count": 0 }],
+      "isBlockCoverage": true
+    }
+  ]
+}
