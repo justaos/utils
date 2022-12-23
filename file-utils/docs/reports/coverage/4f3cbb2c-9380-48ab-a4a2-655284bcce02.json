@@ -1,0 +1,14 @@
+{
+  "scriptId": "132",
+  "url": "",
+  "functions": [
+    {
+      "functionName": "op_open_async",
+      "ranges": [
+        { "startOffset": 151, "endOffset": 681, "count": 2 },
+        { "startOffset": 376, "endOffset": 533, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

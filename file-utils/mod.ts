@@ -1,3 +1,3 @@
-import FileUtils from './src/FileUtils.ts';
+import FileUtils from "./src/FileUtils.ts";
 
 export default FileUtils;

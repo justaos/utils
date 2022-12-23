@@ -1,0 +1,21 @@
+{
+  "scriptId": "222",
+  "url": "https://deno.land/std@0.170.0/fs/move.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 2089, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "move",
+      "ranges": [{ "startOffset": 389, "endOffset": 1120, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "moveSync",
+      "ranges": [{ "startOffset": 1326, "endOffset": 2088, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

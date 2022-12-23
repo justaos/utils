@@ -1,19 +1,23 @@
-import { copy, copySync, existsSync, expandGlobSync } from 'https://deno.land/std@0.95.0/fs/mod.ts';
-import MkdirOptions from './MkdirOptions.ts';
-import RemoveOptions from './RemoveOptions.ts';
+import {
+  copy,
+  copySync,
+  existsSync,
+  expandGlobSync
+} from "https://deno.land/std@0.170.0/fs/mod.ts";
 
+import { writeAll } from "https://deno.land/std@0.170.0/streams/write_all.ts";
+import MkdirOptions from "./MkdirOptions.ts";
+import RemoveOptions from "./RemoveOptions.ts";
+import { path } from "../../deps.ts";
 
 export default class FileUtils {
-
   static existsSync(filePath: string): boolean {
     return existsSync(filePath);
   }
 
-
   static mkdirSync(filePath: string, options?: MkdirOptions): void {
     return Deno.mkdirSync(filePath, options);
   }
-
 
   static remove(path: string, options?: RemoveOptions) {
     return Deno.remove(path, options);
@@ -43,7 +47,6 @@ export default class FileUtils {
     return JSON.parse(this.readTextFileSync(filePath));
   }
 
-
   static readJsonFilesFromPathSync(filePath: string, options?: any): any[] {
     const result: any[] = [];
     for (const file of expandGlobSync(filePath)) {
@@ -61,11 +64,71 @@ export default class FileUtils {
     Deno.writeTextFileSync(filePath, content);
   }
 
-  static copy(sourcePath: string, destinationPath: string) {
-    copy(sourcePath, destinationPath);
+  static async copy(sourcePath: string, destinationPath: string) {
+    await copy(sourcePath, destinationPath);
+  }
+
+  static async unZip(zipSourcePath: string, destinationPath: string) {
+
+    const unzipCommandProcess = Deno.run({
+      cmd: Deno.build.os === "windows"
+        ? [
+          "PowerShell",
+          "Expand-Archive",
+          "-Path",
+          zipSourcePath,
+          "-DestinationPath",
+          destinationPath,
+        ]
+        : ["unzip", zipSourcePath, "-d", destinationPath],
+      stdout: "piped",
+      stderr: "piped",
+    });
+
+    return (await unzipCommandProcess.status()).success;
+
+  }
+
+  static async unZipFromURL(downloadUrl: URL, destinationPath: string) {
+    if (!FileUtils.existsSync(destinationPath)) {
+      FileUtils.mkdirSync(destinationPath, { recursive: true });
+    }
+
+    const tempFilePath = await FileUtils.#downloadFileToTemp(
+      downloadUrl,
+      destinationPath
+    );
+
+    await this.unZip(tempFilePath, destinationPath);
+
+    // remove the temp file
+    await Deno.remove(tempFilePath);
   }
 
   static copySync(sourcePath: string, destinationPath: string, options?: any) {
     copySync(sourcePath, destinationPath, options);
+  }
+
+  static async #downloadFileToTemp(downloadUrl: URL, destinationPath: string) {
+    const response = await fetch(downloadUrl.href);
+    const blob = await response.blob();
+
+    // We convert the blob into a typed array
+    // so we can use it to write the data into the file
+    const arrayBufferFromBlobResponse = await blob.arrayBuffer();
+    const uint8ArrayEncodeFileData = new Uint8Array(
+      arrayBufferFromBlobResponse
+    );
+
+    const tempFilePath = path.join(destinationPath, "_temp_.zip");
+
+    // We then create a new file and write into it
+    const file = await Deno.create(tempFilePath);
+    await writeAll(file, uint8ArrayEncodeFileData);
+
+    // We can finally close the file
+    Deno.close(file.rid);
+
+    return tempFilePath;
   }
 }

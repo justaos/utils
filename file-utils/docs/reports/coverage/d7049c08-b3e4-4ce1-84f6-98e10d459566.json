@@ -1,0 +1,16 @@
+{
+  "scriptId": "211",
+  "url": "https://deno.land/std@0.170.0/streams/copy.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 1367, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "copy",
+      "ranges": [{ "startOffset": 825, "endOffset": 1366, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

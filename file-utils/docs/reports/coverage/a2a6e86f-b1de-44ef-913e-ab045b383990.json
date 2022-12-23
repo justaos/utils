@@ -1,0 +1,26 @@
+{
+  "scriptId": "224",
+  "url": "https://deno.land/std@0.95.0/fs/eol.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 679, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 124, "endOffset": 189, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "detect",
+      "ranges": [{ "startOffset": 334, "endOffset": 550, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "format",
+      "ranges": [{ "startOffset": 601, "endOffset": 678, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

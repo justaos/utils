@@ -1,0 +1,11 @@
+{
+  "scriptId": "193",
+  "url": "file:///D:/development/justaos/@justaos/utils/test.deps.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 128, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

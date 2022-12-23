@@ -1,0 +1,61 @@
+{
+  "scriptId": "225",
+  "url": "https://deno.land/std@0.170.0/fs/walk.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 5043, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "include",
+      "ranges": [
+        { "startOffset": 427, "endOffset": 759, "count": 8 },
+        { "startOffset": 484, "endOffset": 524, "count": 0 },
+        { "startOffset": 526, "endOffset": 555, "count": 0 },
+        { "startOffset": 570, "endOffset": 618, "count": 0 },
+        { "startOffset": 620, "endOffset": 649, "count": 0 },
+        { "startOffset": 711, "endOffset": 740, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 498, "endOffset": 523, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 585, "endOffset": 617, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 676, "endOffset": 708, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "wrapErrorWithRootPath",
+      "ranges": [{ "startOffset": 760, "endOffset": 1162, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "walk",
+      "ranges": [{ "startOffset": 1599, "endOffset": 3332, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "walkSync",
+      "ranges": [
+        { "startOffset": 3387, "endOffset": 5042, "count": 2 },
+        { "startOffset": 3617, "endOffset": 3640, "count": 0 },
+        { "startOffset": 3815, "endOffset": 3838, "count": 0 },
+        { "startOffset": 3914, "endOffset": 3992, "count": 0 },
+        { "startOffset": 4025, "endOffset": 5040, "count": 4 },
+        { "startOffset": 4179, "endOffset": 4582, "count": 0 },
+        { "startOffset": 4621, "endOffset": 4881, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

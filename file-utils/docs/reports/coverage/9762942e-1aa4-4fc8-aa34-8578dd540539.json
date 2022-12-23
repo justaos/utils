@@ -1,0 +1,80 @@
+{
+  "scriptId": "222",
+  "url": "https://deno.land/std@0.95.0/fs/copy.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 8154, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "ensureValidCopy",
+      "ranges": [{ "startOffset": 320, "endOffset": 835, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "ensureValidCopySync",
+      "ranges": [
+        { "startOffset": 836, "endOffset": 1347, "count": 3 },
+        { "startOffset": 1056, "endOffset": 1131, "count": 0 },
+        { "startOffset": 1133, "endOffset": 1346, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "copyFile",
+      "ranges": [{ "startOffset": 1372, "endOffset": 1819, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "copyFileSync",
+      "ranges": [
+        { "startOffset": 1858, "endOffset": 2295, "count": 2 },
+        { "startOffset": 2017, "endOffset": 2293, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "copySymLink",
+      "ranges": [{ "startOffset": 2323, "endOffset": 3060, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "copySymlinkSync",
+      "ranges": [{ "startOffset": 3102, "endOffset": 3823, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "copyDir",
+      "ranges": [{ "startOffset": 3860, "endOffset": 4863, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "copyDirSync",
+      "ranges": [
+        { "startOffset": 4913, "endOffset": 5959, "count": 1 },
+        { "startOffset": 5153, "endOffset": 5444, "count": 0 },
+        { "startOffset": 5491, "endOffset": 5957, "count": 2 },
+        { "startOffset": 5701, "endOffset": 5769, "count": 0 },
+        { "startOffset": 5798, "endOffset": 5862, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "copy",
+      "ranges": [{ "startOffset": 6420, "endOffset": 7061, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "copySync",
+      "ranges": [
+        { "startOffset": 7522, "endOffset": 8153, "count": 1 },
+        { "startOffset": 7649, "endOffset": 7727, "count": 0 },
+        { "startOffset": 7821, "endOffset": 7917, "count": 0 },
+        { "startOffset": 7945, "endOffset": 7997, "count": 0 },
+        { "startOffset": 8076, "endOffset": 8151, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

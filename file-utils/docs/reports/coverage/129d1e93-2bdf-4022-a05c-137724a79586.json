@@ -1,0 +1,64 @@
+{
+  "scriptId": "211",
+  "url": "https://deno.land/std@0.57.0/path/_util.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 3415, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "assertPath",
+      "ranges": [
+        { "startOffset": 318, "endOffset": 477, "count": 2 },
+        { "startOffset": 380, "endOffset": 475, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isPosixPathSeparator",
+      "ranges": [{ "startOffset": 485, "endOffset": 564, "count": 79 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isPathSeparator",
+      "ranges": [
+        { "startOffset": 572, "endOffset": 677, "count": 79 },
+        { "startOffset": 643, "endOffset": 674, "count": 77 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isWindowsDeviceRoot",
+      "ranges": [
+        { "startOffset": 685, "endOffset": 844, "count": 2 },
+        { "startOffset": 758, "endOffset": 785, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "normalizeString",
+      "ranges": [
+        { "startOffset": 913, "endOffset": 3124, "count": 1 },
+        { "startOffset": 1147, "endOffset": 3106, "count": 61 },
+        { "startOffset": 1170, "endOffset": 1196, "count": 60 },
+        { "startOffset": 1196, "endOffset": 1283, "count": 1 },
+        { "startOffset": 1237, "endOffset": 1243, "count": 0 },
+        { "startOffset": 1319, "endOffset": 2985, "count": 7 },
+        { "startOffset": 1372, "endOffset": 1407, "count": 0 },
+        { "startOffset": 1452, "endOffset": 2708, "count": 0 },
+        { "startOffset": 2752, "endOffset": 2800, "count": 6 },
+        { "startOffset": 2800, "endOffset": 2857, "count": 1 },
+        { "startOffset": 2985, "endOffset": 3100, "count": 54 },
+        { "startOffset": 3013, "endOffset": 3027, "count": 0 },
+        { "startOffset": 3029, "endOffset": 3060, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "_format",
+      "ranges": [{ "startOffset": 3132, "endOffset": 3414, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "scriptId": "8",
+  "url": "deno:ext/console/02_console.js",
+  "functions": [
+    {
+      "functionName": "maybeColor",
+      "ranges": [
+        { "startOffset": 8724, "endOffset": 8819, "count": 12 },
+        { "startOffset": 8799, "endOffset": 8803, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 8806, "endOffset": 8814, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "_inspectValue",
+      "ranges": [
+        { "startOffset": 19488, "endOffset": 21274, "count": 2 },
+        { "startOffset": 19632, "endOffset": 19659, "count": 0 },
+        { "startOffset": 19661, "endOffset": 19725, "count": 0 },
+        { "startOffset": 20114, "endOffset": 20170, "count": 0 },
+        { "startOffset": 20177, "endOffset": 20311, "count": 0 },
+        { "startOffset": 20401, "endOffset": 20475, "count": 0 },
+        { "startOffset": 20482, "endOffset": 20564, "count": 0 },
+        { "startOffset": 20571, "endOffset": 20643, "count": 0 },
+        { "startOffset": 20650, "endOffset": 20871, "count": 0 },
+        { "startOffset": 20878, "endOffset": 21174, "count": 0 },
+        { "startOffset": 21181, "endOffset": 21264, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "inspectValue",
+      "ranges": [{ "startOffset": 21278, "endOffset": 21524, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "inspect",
+      "ranges": [{ "startOffset": 67314, "endOffset": 67503, "count": 2 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

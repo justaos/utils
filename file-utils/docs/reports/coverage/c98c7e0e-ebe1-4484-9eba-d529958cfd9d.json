@@ -1,0 +1,25 @@
+{
+  "scriptId": "221",
+  "url": "https://deno.land/std@0.170.0/fs/exists.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 2405, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "exists",
+      "ranges": [{ "startOffset": 1000, "endOffset": 1240, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "existsSync",
+      "ranges": [
+        { "startOffset": 2168, "endOffset": 2404, "count": 4 },
+        { "startOffset": 2271, "endOffset": 2402, "count": 3 },
+        { "startOffset": 2375, "endOffset": 2402, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

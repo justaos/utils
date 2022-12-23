@@ -1,0 +1,21 @@
+{
+  "scriptId": "213",
+  "url": "https://deno.land/std@0.57.0/path/_globrex.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        { "startOffset": 0, "endOffset": 8507, "count": 1 },
+        { "startOffset": 233, "endOffset": 240, "count": 0 },
+        { "startOffset": 273, "endOffset": 278, "count": 0 },
+        { "startOffset": 309, "endOffset": 314, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "globrex",
+      "ranges": [{ "startOffset": 755, "endOffset": 8506, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

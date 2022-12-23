@@ -1,0 +1,92 @@
+{
+  "scriptId": "198",
+  "url": "file:///D:/development/justaos/@justaos/utils/file-utils/src/FileUtils.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 2104, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "existsSync",
+      "ranges": [{ "startOffset": 230, "endOffset": 295, "count": 4 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "mkdirSync",
+      "ranges": [{ "startOffset": 307, "endOffset": 393, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "remove",
+      "ranges": [{ "startOffset": 405, "endOffset": 477, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "removeSync",
+      "ranges": [{ "startOffset": 489, "endOffset": 569, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "readFile",
+      "ranges": [{ "startOffset": 581, "endOffset": 651, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readFileSync",
+      "ranges": [{ "startOffset": 663, "endOffset": 737, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readTextFile",
+      "ranges": [{ "startOffset": 749, "endOffset": 823, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "readTextFileSync",
+      "ranges": [{ "startOffset": 835, "endOffset": 917, "count": 8 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "readJsonFileSync",
+      "ranges": [{ "startOffset": 929, "endOffset": 1023, "count": 6 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "readJsonFilesFromPathSync",
+      "ranges": [
+        { "startOffset": 1035, "endOffset": 1291, "count": 2 },
+        { "startOffset": 1161, "endOffset": 1262, "count": 4 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "writeJsonFileSync",
+      "ranges": [{ "startOffset": 1303, "endOffset": 1419, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "writeTextFileSync",
+      "ranges": [{ "startOffset": 1431, "endOffset": 1526, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "copy",
+      "ranges": [{ "startOffset": 1538, "endOffset": 1634, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "unzip",
+      "ranges": [
+        { "startOffset": 1646, "endOffset": 1979, "count": 1 },
+        { "startOffset": 1973, "endOffset": 1978, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "copySync",
+      "ranges": [{ "startOffset": 1991, "endOffset": 2101, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}
