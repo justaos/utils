@@ -1,0 +1,12 @@
+{
+  "lint": {
+    "files": {
+      "include": ["common-utils/src", "date-utils/src", "email-utils/src", "hash-utils/src", "logger-utils/src"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-explicit-any"]
+    }
+  }
+}

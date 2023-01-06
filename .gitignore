@@ -91,6 +91,7 @@ nbproject
 .idea
 .node_history
 dump.rdb
+**/coverage/
 
 .temp
 npm-debug.log

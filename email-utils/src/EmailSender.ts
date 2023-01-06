@@ -1,5 +1,7 @@
-import { SendConfig, SMTPClient } from 'https://deno.land/x/denomailer@1.2.0/mod.ts';
-
+import {
+  SendConfig,
+  SMTPClient,
+} from "https://deno.land/x/denomailer@1.2.0/mod.ts";
 
 export default class EmailSender {
   #smtpClient: SMTPClient | undefined;
@@ -11,7 +13,7 @@ export default class EmailSender {
 
   connect() {
     this.#smtpClient = new SMTPClient({
-      connection: this.#config
+      connection: this.#config,
     });
   }
 
@@ -24,8 +26,9 @@ export default class EmailSender {
   }
 
   #getSmtpClient() {
-    if (!this.#smtpClient)
-      throw new Error('SMTP Client not initialized');
+    if (!this.#smtpClient) {
+      throw new Error("SMTP Client not initialized");
+    }
     return this.#smtpClient;
   }
 }

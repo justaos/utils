@@ -1,27 +1,6 @@
 {
-  "name": "@justaos/email-utils",
-  "version": "1.0.8",
-  "description": "Email utilities",
-  "homepage": "https://justaos.com",
-  "bugs": {
-    "url": "https://github.com/justaos/utils/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/justaos/utils.git"
-  },
-  "license": "Apache-2.0",
-  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com> (https://shivajivarma.com)",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "private": false,
   "scripts": {
-    "test": "deno test --coverage=docs/reports/coverage --allow-net --unstable",
+    "test": "deno test --coverage=docs/reports/coverage --allow-net --unstable test/",
     "coverage": "deno coverage docs/reports/coverage/ --lcov > docs/reports/coverage/lcov.info"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": [],
-  "gitHead": "365b4a0cf79505659f8df50343d7d2625205f1a1"
+  }
 }

@@ -2,7 +2,7 @@ import {
   copy,
   copySync,
   existsSync,
-  expandGlobSync
+  expandGlobSync,
 } from "https://deno.land/std@0.170.0/fs/mod.ts";
 
 import { writeAll } from "https://deno.land/std@0.170.0/streams/write_all.ts";
@@ -11,6 +11,7 @@ import RemoveOptions from "./RemoveOptions.ts";
 import { path } from "../../deps.ts";
 
 export default class FileUtils {
+
   static existsSync(filePath: string): boolean {
     return existsSync(filePath);
   }
@@ -69,7 +70,6 @@ export default class FileUtils {
   }
 
   static async unZip(zipSourcePath: string, destinationPath: string) {
-
     const unzipCommandProcess = Deno.run({
       cmd: Deno.build.os === "windows"
         ? [
@@ -86,7 +86,6 @@ export default class FileUtils {
     });
 
     return (await unzipCommandProcess.status()).success;
-
   }
 
   static async unZipFromURL(downloadUrl: URL, destinationPath: string) {
@@ -96,7 +95,7 @@ export default class FileUtils {
 
     const tempFilePath = await FileUtils.#downloadFileToTemp(
       downloadUrl,
-      destinationPath
+      destinationPath,
     );
 
     await this.unZip(tempFilePath, destinationPath);
@@ -117,7 +116,7 @@ export default class FileUtils {
     // so we can use it to write the data into the file
     const arrayBufferFromBlobResponse = await blob.arrayBuffer();
     const uint8ArrayEncodeFileData = new Uint8Array(
-      arrayBufferFromBlobResponse
+      arrayBufferFromBlobResponse,
     );
 
     const tempFilePath = path.join(destinationPath, "_temp_.zip");

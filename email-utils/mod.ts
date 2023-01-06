@@ -1,7 +1,4 @@
-import EmailSender from './src/EmailSender.ts';
-import EmailReceiveHandler from './src/EmailReceiver.ts';
+import EmailSender from "./src/EmailSender.ts";
+import EmailReceiveHandler from "./src/EmailReceiver.ts";
 
-export {
-  EmailSender,
-  EmailReceiveHandler
-}
+export { EmailReceiveHandler, EmailSender };

@@ -1,10 +1,10 @@
 export default class CommonUtils {
   static underscoreToCamelCase(input: string): string {
     input = input.charAt(0).toUpperCase() + input.substr(1);
-    input = input.replace(/_(.)/g, (match: string, letter) => {
+    input = input.replace(/_(.)/g, (_match: string, letter) => {
       return ` ${letter.toUpperCase()}`;
     });
-    return input.replace('_', ' ');
+    return input.replace("_", " ");
   }
 
   static hasDuplicates(a: string[]): boolean {
@@ -30,7 +30,7 @@ export default class CommonUtils {
     return Array.from(results.keys());
   }
 
-  static flatToHierarchy(flat: {}[]): any[] {
+  static flatToHierarchy(flat: any[]): any[] {
     const roots: any[] = []; // things without parent
     const all: any = {};
 
@@ -45,7 +45,7 @@ export default class CommonUtils {
         roots.push(item);
       } else if (item.parent in all) {
         const p = all[item.parent];
-        if (!('children' in p)) p.children = [];
+        if (!("children" in p)) p.children = [];
         p.children.push(item);
       }
     }

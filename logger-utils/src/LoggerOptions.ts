@@ -1,5 +1,5 @@
 export default class LoggerOptions {
-  label = '';
+  label = "";
   filePath: string | undefined = undefined;
 
   constructor(label?: string) {

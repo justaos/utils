@@ -1,3 +1,3 @@
-# P4RM Logger utils
+# Email utils
 
-Common logger utility functions used across P4RM projects.
+Email utilities

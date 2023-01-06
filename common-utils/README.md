@@ -1,10 +1,10 @@
-# P4RM File utils
+# File utils
 
-Common file utility functions used across P4RM projects.
+Common file utility functions used across JUSTAOS projects.
 
-```js
-const CommonUtils = require('../lib').default;
+```ts
+import CommonUtils from "../mod.ts";
 
-const result = CommonUtils.underscoreToCamelCase('hello_world');
+const result = CommonUtils.underscoreToCamelCase("hello_world");
 console.log(result); // Hello World
 ```

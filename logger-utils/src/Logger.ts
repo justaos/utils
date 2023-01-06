@@ -1,20 +1,32 @@
-import { Houston, ConsoleTransport, FileTransport, TimePrefix, Format, LogLevelDisplay, LogLevel } from 'https://x.nest.land/Houston@1.0.0/mod.ts'
-import LoggerLevel from './LoggerLevel.ts';
-import LoggerOptions from './LoggerOptions.ts';
+import {
+  ConsoleTransport,
+  FileTransport,
+  Format,
+  Houston,
+  LogLevel,
+  LogLevelDisplay,
+  TimePrefix,
+} from "https://x.nest.land/Houston@1.0.0/mod.ts";
+import LoggerOptions from "./LoggerOptions.ts";
 
 export default class Logger {
   logger: Houston;
 
   constructor(options: LoggerOptions = new LoggerOptions()) {
+    const transports = [];
 
-
-    const transports  = [];
-
-    transports.push(new ConsoleTransport( [LogLevel.Info, LogLevel.Success, LogLevel.Warning, LogLevel.Error], {
-      format: Format.text,
-      prefix: new TimePrefix(),
-      logLevelDisplay: LogLevelDisplay.Text,
-    }));
+    transports.push(
+      new ConsoleTransport([
+        LogLevel.Info,
+        LogLevel.Success,
+        LogLevel.Warning,
+        LogLevel.Error,
+      ], {
+        format: Format.text,
+        prefix: new TimePrefix(),
+        logLevelDisplay: LogLevelDisplay.Text,
+      }),
+    );
 
     if (options.filePath) {
       transports.push(new FileTransport(options.filePath));
@@ -22,7 +34,7 @@ export default class Logger {
 
     this.logger = new Houston(transports);
 
-  /*  const customLogFormat = Houston.format.printf((info: any) => {
+    /*  const customLogFormat = Houston.format.printf((info: any) => {
       if (info.message instanceof Error) {
         info.message = info.message.stack;
       }
