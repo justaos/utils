@@ -21,7 +21,9 @@
   "contributors": [],
   "scripts": {
     "test": "deno task test",
-    "coverage": "deno task coverage"
+    "coverage": "deno task coverage",
+    "version:patch": "deno task version:patch",
+    "version:minor": "deno task version:minor"
   },
   "publishConfig": {
     "access": "public"

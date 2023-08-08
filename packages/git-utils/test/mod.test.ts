@@ -15,7 +15,7 @@ describe({
 
     beforeAll(function () {
       const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
-      if (FileUtils.exists(tempDir)) {
+      if (FileUtils.existsSync(tempDir)) {
         FileUtils.removeSync(tempDir, { recursive: true });
       }
       FileUtils.mkdirSync(tempDir, { recursive: true });
@@ -27,7 +27,7 @@ describe({
         "https://github.com/justaos/git-utils-test.git"
       );
       assertEquals(
-        FileUtils.exists(
+        FileUtils.existsSync(
           TEST_RESOURCES_PATH + "/_temp_/git-utils-test",
         ),
         true,
