@@ -2,6 +2,7 @@
 
 Common utility functions used across projects.
 
+![GitHub release (with filter)](https://img.shields.io/github/v/release/justaos/utils?label=Release)
 [![Build](https://github.com/justaos/utils/workflows/Build/badge.svg)](https://github.com/justaos/utils/actions?workflow=Build)
 [![Coverage Status](https://coveralls.io/repos/github/justaos/utils/badge.svg?branch=master)](https://coveralls.io/github/justaos/utils?branch=master)
 

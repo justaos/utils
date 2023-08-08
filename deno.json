@@ -8,5 +8,8 @@
       "include": ["ban-untagged-todo"],
       "exclude": ["no-explicit-any"]
     }
+  },
+  "tasks": {
+    "test": "deno test --coverage=docs/reports/coverage --allow-all --unstable packages/**/test"
   }
 }

@@ -1,8 +1,8 @@
-import { afterAll, assertEquals, beforeAll, describe, it } from "../../test.deps.ts";
+import { afterAll, assertEquals, beforeAll, describe, it } from "../../../test.deps.ts";
 
 import GitUtils from "../mod.ts";
-import { FileUtils } from "../../mod.ts";
-import { path } from "../../deps.ts";
+import { FileUtils } from "../../../mod.ts";
+import { path } from "../../../deps.ts";
 
 const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
 const TEST_RESOURCES_PATH = path.normalize(__dirname + "/resources");
@@ -15,7 +15,7 @@ describe({
 
     beforeAll(function () {
       const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
-      if (FileUtils.existsSync(tempDir)) {
+      if (FileUtils.exists(tempDir)) {
         FileUtils.removeSync(tempDir, { recursive: true });
       }
       FileUtils.mkdirSync(tempDir, { recursive: true });
@@ -24,11 +24,11 @@ describe({
     it("#validateHash()", async () => {
       await GitUtils.checkoutRepository(
         `${TEST_RESOURCES_PATH}/_temp_`,
-        "https://github.com/justaos/odm.git"
+        "https://github.com/justaos/git-utils-test.git"
       );
       assertEquals(
-        FileUtils.existsSync(
-          TEST_RESOURCES_PATH + "/_temp_/odm",
+        FileUtils.exists(
+          TEST_RESOURCES_PATH + "/_temp_/git-utils-test",
         ),
         true,
       );

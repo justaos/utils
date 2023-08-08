@@ -9,11 +9,18 @@ on:
 jobs:
   build:
     if: ${{startsWith(github.event.head_commit.message, 'WIP') != true}}
+
+    services:
+      mongodb:
+        image: mongo:5.0.6
+        ports:
+          - 27017:27017
+
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        deno-version: [ 1.23.4 ]
+        deno-version: [ 1.36.0 ]
 
     steps:
       - uses: actions/checkout@v1
@@ -23,15 +30,13 @@ jobs:
           deno-version: ${{ matrix.deno-version }}
       - name: build and test
         run: |
-          deno --version
-          cd common-utils
-          deno test --coverage=docs/reports/coverage --allow-net --unstable
-          cd ../logger-utils
-          deno test --coverage=docs/reports/coverage --allow-net --unstable
-          cd ../hash-utils
-          deno test --coverage=docs/reports/coverage --allow-net --unstable
-          cd ../file-utils
-          deno test --coverage=docs/reports/coverage --allow-net --allow-read --allow-run --allow-write --unstable
+          deno --version --unstable
+          deno task test
+          deno task coverage
         env:
           CI: true
+      - name: Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./docs/reports/coverage/lcov.info
 

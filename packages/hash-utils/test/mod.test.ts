@@ -1,4 +1,4 @@
-import { assertEquals, describe, it } from "../../test.deps.ts";
+import { assertEquals, describe, it } from "../../../test.deps.ts";
 
 import HashUtils from "../mod.ts";
 

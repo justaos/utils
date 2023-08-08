@@ -1,4 +1,4 @@
-import { describe, it } from "../../test.deps.ts";
+import { describe, it } from "../../../test.deps.ts";
 
 import { Logger } from "../mod.ts";
 

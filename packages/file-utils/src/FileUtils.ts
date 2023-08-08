@@ -3,17 +3,44 @@ import {
   copySync,
   existsSync,
   expandGlobSync,
-} from "https://deno.land/std@0.170.0/fs/mod.ts";
+  writeAll
+} from "../deps.ts";
 
-import { writeAll } from "https://deno.land/std@0.170.0/streams/write_all.ts";
 import MkdirOptions from "./MkdirOptions.ts";
 import RemoveOptions from "./RemoveOptions.ts";
-import { path } from "../../deps.ts";
+import { path } from "../../../deps.ts";
 
 export default class FileUtils {
-
   static existsSync(filePath: string): boolean {
-    return existsSync(filePath);
+    try {
+      Deno.statSync(filePath);
+      // successful, file or directory must exist
+      return true;
+    } catch (error) {
+      if (error instanceof Deno.errors.NotFound) {
+        // file or directory does not exist
+        return false;
+      } else {
+        // unexpected error, maybe permissions, pass it along
+        throw error;
+      }
+    }
+  }
+
+  static async exists(filePath: string): Promise<boolean> {
+    try {
+      await Deno.stat(filePath);
+      // successful, file or directory must exist
+      return true;
+    } catch (error) {
+      if (error instanceof Deno.errors.NotFound) {
+        // file or directory does not exist
+        return false;
+      } else {
+        // unexpected error, maybe permissions, pass it along
+        throw error;
+      }
+    }
   }
 
   static mkdirSync(filePath: string, options?: MkdirOptions): void {
@@ -71,31 +98,32 @@ export default class FileUtils {
 
   static async unZip(zipSourcePath: string, destinationPath: string) {
     const unzipCommandProcess = Deno.run({
-      cmd: Deno.build.os === "windows"
-        ? [
-          "PowerShell",
-          "Expand-Archive",
-          "-Path",
-          zipSourcePath,
-          "-DestinationPath",
-          destinationPath,
-        ]
-        : ["unzip", zipSourcePath, "-d", destinationPath],
+      cmd:
+        Deno.build.os === "windows"
+          ? [
+              "PowerShell",
+              "Expand-Archive",
+              "-Path",
+              zipSourcePath,
+              "-DestinationPath",
+              destinationPath
+            ]
+          : ["unzip", zipSourcePath, "-d", destinationPath],
       stdout: "piped",
-      stderr: "piped",
+      stderr: "piped"
     });
 
     return (await unzipCommandProcess.status()).success;
   }
 
   static async unZipFromURL(downloadUrl: URL, destinationPath: string) {
-    if (!FileUtils.existsSync(destinationPath)) {
+    if (!await FileUtils.exists(destinationPath)) {
       FileUtils.mkdirSync(destinationPath, { recursive: true });
     }
 
     const tempFilePath = await FileUtils.#downloadFileToTemp(
       downloadUrl,
-      destinationPath,
+      destinationPath
     );
 
     await this.unZip(tempFilePath, destinationPath);
@@ -116,7 +144,7 @@ export default class FileUtils {
     // so we can use it to write the data into the file
     const arrayBufferFromBlobResponse = await blob.arrayBuffer();
     const uint8ArrayEncodeFileData = new Uint8Array(
-      arrayBufferFromBlobResponse,
+      arrayBufferFromBlobResponse
     );
 
     const tempFilePath = path.join(destinationPath, "_temp_.zip");

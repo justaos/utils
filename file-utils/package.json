@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "test": "deno test --coverage=docs/reports/coverage -A --unstable",
-    "coverage": "deno coverage docs/reports/coverage/ --lcov > docs/reports/coverage/lcov.info"
-  }
-}

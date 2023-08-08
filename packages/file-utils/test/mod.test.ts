@@ -1,11 +1,11 @@
-import { path } from "../../deps.ts";
+import { path } from "../../../deps.ts";
 import {
   afterAll,
   assertEquals,
   beforeAll,
   describe,
   it,
-} from "../../test.deps.ts";
+} from "../../../test.deps.ts";
 import FileUtils from "../mod.ts";
 
 const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
@@ -16,18 +16,19 @@ describe({
   sanitizeResources: false,
   sanitizeOps: false,
   fn: () => {
-    beforeAll(function () {
+    beforeAll(async () => {
       const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
       if (!FileUtils.existsSync(tempDir)) {
+        console.log("SHIVAJI true")
         FileUtils.mkdirSync(tempDir, { recursive: true });
       }
     });
 
-    afterAll(function () {
-      const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
+    afterAll(async ()=> {
+      /*const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
       if (FileUtils.existsSync(tempDir)) {
         FileUtils.remove(tempDir, { recursive: true });
-      }
+      }*/
       const copyDir = `${TEST_RESOURCES_PATH}/copy`;
       if (FileUtils.existsSync(copyDir)) {
         FileUtils.remove(copyDir, { recursive: true });
@@ -77,7 +78,7 @@ describe({
       assertEquals(arr[1].title, "b");
     });
 
-    it("#remove()", function () {
+    it("#remove()", async () => {
       const dir = `${TEST_RESOURCES_PATH}/_temp_`;
       FileUtils.removeSync(dir, { recursive: true });
       assertEquals(FileUtils.existsSync(dir), false);
