@@ -30,6 +30,7 @@ jobs:
           deno-version: ${{ matrix.deno-version }}
       - name: build and test
         run: |
+          apt-get install git
           deno --version --unstable
           deno task test
           deno task coverage
