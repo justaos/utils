@@ -1,4 +1,4 @@
-# justaos's Utils
+# JUSTAOS's Utils
 
 Common utility functions used across projects.
 
