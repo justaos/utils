@@ -1,7 +1,6 @@
 import {
   copy,
   copySync,
-  existsSync,
   expandGlobSync,
   writeAll
 } from "../deps.ts";
@@ -75,7 +74,7 @@ export default class FileUtils {
     return JSON.parse(this.readTextFileSync(filePath));
   }
 
-  static readJsonFilesFromPathSync(filePath: string, options?: any): any[] {
+  static readJsonFilesFromPathSync(filePath: string): any[] {
     const result: any[] = [];
     for (const file of expandGlobSync(filePath)) {
       const data = this.readJsonFileSync(file.path);

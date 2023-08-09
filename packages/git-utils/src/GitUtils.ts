@@ -1,7 +1,7 @@
 import { shell } from "../deps.ts";
 
 export default class GitUtils {
-  static checkoutRepository(path: string, repositoryUrl: string): Promise<any> {
+  static async checkoutRepository(path: string, repositoryUrl: string): Promise<any> {
     if (!path) throw new Error("path is required parameter");
     if (!repositoryUrl) throw new Error("repositoryUrl is required parameter");
 

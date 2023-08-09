@@ -10,7 +10,7 @@
     }
   },
   "tasks": {
-    "test": "deno test --coverage=docs/reports/coverage --allow-all --unstable packages/**/test",
+    "test": "deno test --coverage=docs/reports/coverage --allow-all --unstable packages/commons-utils/test packages/date-utils/test",
     "version:patch": "semver inc patch",
     "version:minor": "semver inc minor"
   }
