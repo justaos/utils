@@ -1,4 +1,4 @@
 import * as log from "https://deno.land/std@0.210.0/log/mod.ts";
-import { getLogger } from "https://deno.land/std@0.210.0/log/mod.ts";
+import { getLogger, Logger } from "https://deno.land/std@0.210.0/log/mod.ts";
 
-export { log, getLogger };
+export { log, getLogger, Logger };

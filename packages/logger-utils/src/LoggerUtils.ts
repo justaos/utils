@@ -1,4 +1,4 @@
-import { getLogger, log } from "../deps.ts";
+import { getLogger, log, Logger } from "../deps.ts";
 
 export default class LoggerUtils {
   static loggers: {
@@ -23,7 +23,7 @@ export default class LoggerUtils {
     });
   }
 
-  static getLogger(loggerName: string) {
+  static getLogger(loggerName: string): Logger {
     if (!LoggerUtils.loggers[loggerName]) {
       return LoggerUtils.defineLogger(loggerName);
     }
