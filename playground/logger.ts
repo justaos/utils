@@ -5,7 +5,7 @@ import {
 import LoggerUtils from "../packages/logger-utils/src/LoggerUtils.ts";
 import { getLogger } from "https://deno.land/std@0.210.0/log/mod.ts";
 
-LoggerUtils.createLogger("my-awesome-module", "ERROR");
+LoggerUtils.defineLogger("my-awesome-module", "NOTSET");
 
 
 let myLogger = getLogger("my-awesome-module");

@@ -275,6 +275,9 @@
     "https://deno.land/x/bcrypt@v0.2.4/mod.ts": "8eaac7e28fd305228e5994de60032b743282bfeadd5060c1759288d27f32d28e",
     "https://deno.land/x/bcrypt@v0.2.4/src/bcrypt/base64.ts": "b8266450a4f1eb6960f60f2f7986afc4dde6b45bd2d7ee7ba10789e67e17b9f7",
     "https://deno.land/x/bcrypt@v0.2.4/src/bcrypt/bcrypt.ts": "7845b01323458b530dcf6e9ab46e513c507b6ff1670457afaa0b3465721b56b4",
-    "https://deno.land/x/bcrypt@v0.2.4/src/main.ts": "4ac3ccc2247ce729f6c7d57654909949b62aafdabd996483c97f34aa1afac82a"
+    "https://deno.land/x/bcrypt@v0.2.4/src/main.ts": "4ac3ccc2247ce729f6c7d57654909949b62aafdabd996483c97f34aa1afac82a",
+    "https://deno.land/x/speed_highlight_js@v1.2.4/dist/languages/sql.js": "30c339b07ec2a5d90c5fb78ba3c7af2f72ab6ff9d819b381e704984723b1b60a",
+    "https://deno.land/x/speed_highlight_js@v1.2.4/dist/terminal.js": "7077ecb9f3f0e6f8d0b341dd106dee521c82a9d0bdabacf86cd4fb3b25388b98",
+    "https://deno.land/x/speed_highlight_js@v1.2.4/dist/themes/default.js": "31dafa79fed544a3329a43d9fbe13e36697ce77e6f9fcd53005a1e00fadc4140"
   }
 }
