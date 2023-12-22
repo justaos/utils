@@ -31,7 +31,7 @@ describe({
       FileUtils.removeSync(tempDir, { recursive: true });
     });
 
-    it("#validateHash()", async () => {
+    it("#checkoutRepository()", async () => {
       await GitUtils.checkoutRepository(
         `${TEST_RESOURCES_PATH}/_temp_`,
         "https://github.com/justaos/git-utils-test.git"
