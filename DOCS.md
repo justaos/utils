@@ -1,4 +1,4 @@
 Tools used for development
 --------------------------
-Using semver-cli for versioning
-https://github.com/Optum/semver-cli
+Using version for versioning
+https://deno.land/x/version

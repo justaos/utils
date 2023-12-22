@@ -3,7 +3,7 @@ import { assertEquals, describe, it } from "../../../test.deps.ts";
 import CommonUtils from "../mod.ts";
 
 describe("common-utils", function () {
-  it("#underscoreToCamelCase()", function () {
+  it("underscoreToCamelCase()", function () {
     assertEquals(
       CommonUtils.underscoreToCamelCase("hello_world"),
       "Hello World",
@@ -14,19 +14,19 @@ describe("common-utils", function () {
     );
   });
 
-  it("#hasDuplicates()", function () {
+  it("hasDuplicates()", function () {
     assertEquals(CommonUtils.hasDuplicates(["a", "a"]), true);
     assertEquals(CommonUtils.hasDuplicates(["a", "ab"]), false);
   });
 
-  it("#findDuplicates()", function () {
+  it("findDuplicates()", function () {
     const result = CommonUtils.findDuplicates(["a", "b", "c", "b", "a", "a"]);
     assertEquals(result.length, 2);
     assertEquals(result[0], "a");
     assertEquals(result[1], "b");
   });
 
-  it("#flatToHierarchy()", function () {
+  it("flatToHierarchy()", function () {
     const result = CommonUtils.flatToHierarchy([
       { id: 1 },
       { id: 2, parent: 1 },

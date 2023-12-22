@@ -22,6 +22,7 @@
   "scripts": {
     "test": "deno task test",
     "coverage": "deno task coverage",
+    "coverage:report": "deno task coverage:report",
     "version:patch": "deno task version:patch",
     "version:minor": "deno task version:minor"
   },

@@ -1,5 +1,3 @@
-import Logger from "./src/Logger.ts";
-import LoggerLevel from "./src/LoggerLevel.ts";
-import LoggerOptions from "./src/LoggerOptions.ts";
+import LoggerUtils from "./src/LoggerUtils.ts";
 
-export { Logger, LoggerLevel, LoggerOptions };
+export { LoggerUtils };

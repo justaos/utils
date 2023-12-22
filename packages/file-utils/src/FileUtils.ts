@@ -1,8 +1,7 @@
 import {
   copy,
   copySync,
-  expandGlobSync,
-  writeAll
+  expandGlobSync
 } from "../deps.ts";
 
 import MkdirOptions from "./MkdirOptions.ts";
@@ -150,7 +149,8 @@ export default class FileUtils {
 
     // We then create a new file and write into it
     const file = await Deno.create(tempFilePath);
-    await writeAll(file, uint8ArrayEncodeFileData);
+
+    const written = await file.write(uint8ArrayEncodeFileData);
 
     // We can finally close the file
     Deno.close(file.rid);
