@@ -1,3 +1,5 @@
 import CommonUtils from "./src/CommonUtils.ts";
 
-export default CommonUtils;
+export { CommonUtils };
+
+export type { UUID } from "./src/CommonTypes.ts";
