@@ -33,7 +33,7 @@ describe({
 
     it("#checkoutRepository()", async () => {
       await GitUtils.checkoutRepository(
-        `${TEST_RESOURCES_PATH}/_temp_`,
+        new URL('./resources/_temp_', import.meta.url),
         "https://github.com/justaos/git-utils-test.git"
       );
       assertEquals(

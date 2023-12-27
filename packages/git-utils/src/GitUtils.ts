@@ -1,22 +1,19 @@
-import { shell } from "../deps.ts";
-
 export default class GitUtils {
-  static async checkoutRepository(path: string, repositoryUrl: string): Promise<any> {
-    if (!path) throw new Error("path is required parameter");
-    if (!repositoryUrl) throw new Error("repositoryUrl is required parameter");
-
-    if (!shell.which("git")) {
-      shell.echo("Sorry, this script requires git");
-      shell.exit(1);
-    }
-
-    shell.cd(path);
-
-    return new Promise(function(resolve, reject) {
-      shell.exec("git clone " + repositoryUrl, function() {
-        resolve(void 0);
-      });
+  static async checkoutRepository(
+    checkoutFolderPath: URL,
+    repositoryUrl: string
+  ): Promise<any> {
+    const command = new Deno.Command("git", {
+      args: ["clone", repositoryUrl],
+      stdin: "piped",
+      stdout: "piped",
+      cwd: checkoutFolderPath
     });
+    const process = command.spawn();
+
+    // open a file and pipe the subprocess output to it.
+    await process.stdin.close();
+    const result = await process.output();
+    console.log(new TextDecoder().decode(result.stdout));
   }
 }
-
