@@ -3,7 +3,7 @@ import {
   setTheme
 } from "https://deno.land/x/speed_highlight_js@v1.2.4/dist/terminal.js";
 import LoggerUtils from "../packages/logger-utils/src/LoggerUtils.ts";
-import { getLogger } from "https://deno.land/std@0.210.0/log/mod.ts";
+import { getLogger } from "https://deno.land/std@0.214.0/log/mod.ts";
 
 LoggerUtils.defineLogger("my-awesome-module", "NOTSET");
 

@@ -8,7 +8,7 @@ export default class LoggerUtils {
   static handlers: {
     [key: string]: any;
   } = {
-    console: new log.handlers.ConsoleHandler("NOTSET", {
+    console: new log.ConsoleHandler("NOTSET", {
       formatter: (record: any) =>
         `[${record.datetime.toISOString()}] ${record.levelName.padEnd(
           7
@@ -31,7 +31,7 @@ export default class LoggerUtils {
   }
 
   static defineFileHandler(handlerName: string, filename: string) {
-    LoggerUtils.handlers[handlerName] = new log.handlers.FileHandler("NOTSET", {
+    LoggerUtils.handlers[handlerName] = new log.FileHandler("NOTSET", {
       filename: filename,
       // you can change format of output message using any keys in `LogRecord`.
       formatter: (record: any) =>

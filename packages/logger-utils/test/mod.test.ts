@@ -1,7 +1,7 @@
 import { assertEquals, describe, it } from "../../../test.deps.ts";
 
 import { LoggerUtils } from "../mod.ts";
-import { bgRgb24, rgb24 } from "https://deno.land/std@0.210.0/fmt/colors.ts";
+import { bgRgb24, rgb24 } from "https://deno.land/std@0.214.0/fmt/colors.ts";
 import { FileUtils } from "../../../mod.ts";
 
 describe({
