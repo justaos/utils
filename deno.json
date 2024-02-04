@@ -13,7 +13,7 @@
     "test": "deno test --coverage=docs/reports/coverage --allow-all packages/common-utils/test packages/date-utils/test packages/git-utils/test  packages/file-utils/test packages/logger-utils/test",
     "coverage": "deno coverage docs/reports/coverage/ --lcov > docs/reports/coverage/lcov.info",
     "coverage:report": "deno coverage docs/reports/coverage",
-    "version:patch": "semver inc patch",
-    "version:minor": "semver inc minor"
+    "version:patch": "version patch",
+    "version:minor": "version minor"
   }
 }
