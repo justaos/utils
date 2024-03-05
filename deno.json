@@ -4,7 +4,12 @@
   "exports": "./mod.ts",
   "lint": {
     "files": {
-      "include": ["common-utils/src", "date-utils/src", "email-utils/src", "logger-utils/src"]
+      "include": [
+        "common-utils/src",
+        "date-utils/src",
+        "email-utils/src",
+        "logger-utils/src"
+      ]
     },
     "rules": {
       "tags": ["recommended"],
@@ -18,5 +23,12 @@
     "coverage:report": "deno coverage docs/reports/coverage",
     "version:patch": "version patch",
     "version:minor": "version minor"
+  },
+  "imports": {
+    "@std/fmt": "jsr:@std/fmt@^0.218.2",
+    "@std/fs": "jsr:@std/fs@^0.218.2",
+    "@std/log": "jsr:@std/log@^0.218.2",
+    "@std/path": "jsr:@std/path@^0.218.2",
+    "@std/uuid": "jsr:@std/uuid@^0.218.2"
   }
 }

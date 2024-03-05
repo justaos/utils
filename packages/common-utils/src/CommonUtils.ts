@@ -1,5 +1,17 @@
-import { bcrypt, uuid } from "../deps.ts";
+import { uuid } from "../deps.ts";
 
+/**
+ * This module contains commonly used utility functions
+ * @module
+ */
+
+/**
+ * ```ts
+ * import { CommonUtils } from "@justaos/utils";
+ *
+ * CommonUtils.underscoreToCamelCase("hello_world"); // Hello World
+ * ```
+ * */
 export default class CommonUtils {
   static underscoreToCamelCase(input: string): string {
     input = input.charAt(0).toUpperCase() + input.substr(1);
@@ -64,11 +76,11 @@ export default class CommonUtils {
     return uuid.validate(id);
   }
 
-  static generateHash(data: string): string {
+  /*static generateHash(data: string): string {
     return bcrypt.hashSync(data, bcrypt.genSaltSync(8));
   }
 
   static validateHash(data: string, dataHash: string): boolean {
     return bcrypt.compareSync(data, dataHash);
-  }
+  }*/
 }

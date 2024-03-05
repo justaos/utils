@@ -45,11 +45,11 @@ export default class FileUtils {
     return Deno.mkdirSync(filePath, options);
   }
 
-  static remove(path: string, options?: RemoveOptions) {
+  static remove(path: string, options?: RemoveOptions): Promise<void>{
     return Deno.remove(path, options);
   }
 
-  static removeSync(path: string, options?: RemoveOptions) {
+  static removeSync(path: string, options?: RemoveOptions): void {
     return Deno.removeSync(path, options);
   }
 
@@ -57,7 +57,7 @@ export default class FileUtils {
     return Deno.readFileSync(filePath);
   }
 
-  static readFileSync(filePath: string) {
+  static readFileSync(filePath: string): Uint8Array {
     return Deno.readFileSync(filePath);
   }
 
@@ -65,7 +65,7 @@ export default class FileUtils {
     return Deno.readTextFile(filePath);
   }
 
-  static readTextFileSync(filePath: string) {
+  static readTextFileSync(filePath: string): string {
     return Deno.readTextFileSync(filePath);
   }
 
@@ -82,19 +82,19 @@ export default class FileUtils {
     return result;
   }
 
-  static writeJsonFileSync(filePath: string, object: any) {
+  static writeJsonFileSync(filePath: string, object: any): void {
     return this.writeTextFileSync(filePath, JSON.stringify(object));
   }
 
-  static writeTextFileSync(filePath: string, content: string) {
+  static writeTextFileSync(filePath: string, content: string): void {
     Deno.writeTextFileSync(filePath, content);
   }
 
-  static async copy(sourcePath: string, destinationPath: string) {
+  static async copy(sourcePath: string, destinationPath: string): Promise<void> {
     await copy(sourcePath, destinationPath);
   }
 
-  static async unZip(zipSourcePath: string, destinationPath: string) {
+  static async unZip(zipSourcePath: string, destinationPath: string): Promise<boolean> {
     const unzipCommandProcess = Deno.run({
       cmd:
         Deno.build.os === "windows"
@@ -130,7 +130,7 @@ export default class FileUtils {
     await Deno.remove(tempFilePath);
   }
 
-  static copySync(sourcePath: string, destinationPath: string, options?: any) {
+  static copySync(sourcePath: string, destinationPath: string, options?: any): void {
     copySync(sourcePath, destinationPath, options);
   }
 

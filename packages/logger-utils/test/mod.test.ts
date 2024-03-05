@@ -1,7 +1,7 @@
 import { assertEquals, describe, it } from "../../../test.deps.ts";
 
 import { LoggerUtils } from "../mod.ts";
-import { bgRgb24, rgb24 } from "https://deno.land/std@0.214.0/fmt/colors.ts";
+import * as fmt from "@std/fmt/colors";
 import { FileUtils } from "../../../mod.ts";
 
 describe({
@@ -16,7 +16,7 @@ describe({
         "my-file-handler"
       ]);
       logger.info(
-        bgRgb24(rgb24("Hello, World!", { r: 0, g: 0, b: 0 }), {
+        fmt.bgRgb24(fmt.rgb24("Hello, World!", { r: 0, g: 0, b: 0 }), {
           r: 255,
           g: 138,
           b: 101
