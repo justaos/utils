@@ -1,6 +1,6 @@
 import Imap from "npm:imap@0.8.19";
 
-import { Logger } from "../deps.ts";
+import { Logger, LoggerUtils } from "../deps.ts";
 import * as mailparser from "npm:mailparser";
 import replyParser from "npm:node-email-reply-parser";
 
@@ -18,9 +18,7 @@ export default class EmailReceiveHandler {
 
   constructor(config: any) {
     this.#imap = new Imap(config);
-    this.#logger = Logger.createLogger({
-      label: EmailReceiveHandler.name
-    });
+    this.#logger = LoggerUtils.defineLogger(EmailReceiveHandler.name);
   }
 
   connect(resolve: any, reject: any) {

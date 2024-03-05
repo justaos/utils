@@ -19,6 +19,7 @@ export default class EmailSender {
 
   async close() {
     await this.#getSmtpClient().close();
+    this.#smtpClient = undefined;
   }
 
   async send(config: SendConfig) {

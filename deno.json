@@ -1,4 +1,7 @@
 {
+  "name": "@justaos/utils",
+  "version": "1.9.1",
+  "exports": "./mod.ts",
   "lint": {
     "files": {
       "include": ["common-utils/src", "date-utils/src", "email-utils/src", "logger-utils/src"]
