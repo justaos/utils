@@ -9,7 +9,8 @@
       "jsr:@std/fs@^0.218.2": "jsr:@std/fs@0.218.2",
       "jsr:@std/log@^0.218.2": "jsr:@std/log@0.218.2",
       "jsr:@std/path@^0.218.2": "jsr:@std/path@0.218.2",
-      "jsr:@std/uuid@^0.218.2": "jsr:@std/uuid@0.218.2"
+      "jsr:@std/uuid@^0.218.2": "jsr:@std/uuid@0.218.2",
+      "npm:bcryptjs@2.4.3": "npm:bcryptjs@2.4.3"
     },
     "jsr": {
       "@std/assert@0.218.2": {
@@ -52,6 +53,12 @@
           "jsr:@std/crypto@^0.218.2"
         ]
       }
+    },
+    "npm": {
+      "bcryptjs@2.4.3": {
+        "integrity": "sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==",
+        "dependencies": {}
+      }
     }
   },
   "remote": {
@@ -88,7 +95,11 @@
     "https://deno.land/std@0.214.0/assert/unreachable.ts": "38cfecb95d8b06906022d2f9474794fca4161a994f83354fd079cac9032b5145",
     "https://deno.land/std@0.214.0/fmt/colors.ts": "aeaee795471b56fc62a3cb2e174ed33e91551b535f44677f6320336aabb54fbb",
     "https://deno.land/std@0.214.0/testing/_test_suite.ts": "f10a8a6338b60c403f07a76f3f46bdc9f1e1a820c0a1decddeb2949f7a8a0546",
-    "https://deno.land/std@0.214.0/testing/bdd.ts": "a7a9f691c6531166e4afa9d91bd5750c7418407bb310473b27eda59fd2d1f609"
+    "https://deno.land/std@0.214.0/testing/bdd.ts": "a7a9f691c6531166e4afa9d91bd5750c7418407bb310473b27eda59fd2d1f609",
+    "https://deno.land/x/bcrypt@v0.4.1/mod.ts": "ff09bdae282583cf5f7d87efe37ddcecef7f14f6d12e8b8066a3058db8c6c2f7",
+    "https://deno.land/x/bcrypt@v0.4.1/src/bcrypt/base64.ts": "b8266450a4f1eb6960f60f2f7986afc4dde6b45bd2d7ee7ba10789e67e17b9f7",
+    "https://deno.land/x/bcrypt@v0.4.1/src/bcrypt/bcrypt.ts": "ec221648cc6453ea5e3803bc817c01157dada06aa6f7a0ba6b9f87aae32b21e2",
+    "https://deno.land/x/bcrypt@v0.4.1/src/main.ts": "08d201b289c8d9c46f8839c69cd6625b213863db29775c7a200afc3b540e64f8"
   },
   "workspace": {
     "dependencies": [

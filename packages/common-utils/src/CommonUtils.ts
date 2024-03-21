@@ -1,4 +1,4 @@
-import { uuid } from "../deps.ts";
+import { bcrypt, uuid } from "../deps.ts";
 
 /**
  * This module contains commonly used utility functions
@@ -13,13 +13,6 @@ import { uuid } from "../deps.ts";
  * ```
  * */
 export default class CommonUtils {
-  static underscoreToCamelCase(input: string): string {
-    input = input.charAt(0).toUpperCase() + input.substr(1);
-    input = input.replace(/_(.)/g, (_match: string, letter) => {
-      return ` ${letter.toUpperCase()}`;
-    });
-    return input.replace("_", " ");
-  }
 
   static hasDuplicates(a: string[]): boolean {
     for (let i = 0; i <= a.length; i++) {
@@ -76,11 +69,11 @@ export default class CommonUtils {
     return uuid.validate(id);
   }
 
-  /*static generateHash(data: string): string {
+  static generateHash(data: string): string {
     return bcrypt.hashSync(data, bcrypt.genSaltSync(8));
   }
 
   static validateHash(data: string, dataHash: string): boolean {
     return bcrypt.compareSync(data, dataHash);
-  }*/
+  }
 }

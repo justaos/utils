@@ -21,7 +21,7 @@ export default class EmailReceiveHandler {
     this.#logger = LoggerUtils.defineLogger(EmailReceiveHandler.name);
   }
 
-  connect(resolve: any, reject: any) {
+  connect(resolve: any, reject: any): void {
     let firstSkipped = false;
     let totalMessagesInInbox = 0;
 
@@ -84,7 +84,7 @@ export default class EmailReceiveHandler {
     this.#imap.connect();
   }
 
-  end() {
+  end(): any {
     return this.#imap.end();
   }
 }

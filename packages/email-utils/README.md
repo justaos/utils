@@ -1,3 +1,0 @@
-# Email utils
-
-Email utilities
