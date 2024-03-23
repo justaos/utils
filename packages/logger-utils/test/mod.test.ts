@@ -1,4 +1,4 @@
-import { assertEquals, describe, it } from "../../../test.deps.ts";
+import { assertEquals, describe, it } from "../../../test_deps.ts";
 
 import { LoggerUtils } from "../mod.ts";
 import * as fmt from "@std/fmt/colors";

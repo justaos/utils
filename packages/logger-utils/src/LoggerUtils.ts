@@ -46,7 +46,7 @@ export default class LoggerUtils {
 
   static defineLogger(loggerName: string, level?: string, handlers?: string[]): Logger {
     LoggerUtils.loggers[loggerName] = {
-      level: level || "DEBUG",
+      level: level || "INFO",
       handlers: handlers || ["console"]
     };
     LoggerUtils.setup();

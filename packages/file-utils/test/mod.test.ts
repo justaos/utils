@@ -5,7 +5,7 @@ import {
   beforeAll,
   describe,
   it,
-} from "../../../test.deps.ts";
+} from "../../../test_deps.ts";
 import FileUtils from "../mod.ts";
 
 const __dirname = path.dirname(path.fromFileUrl(import.meta.url));

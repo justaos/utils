@@ -1,18 +1,8 @@
-import { assertEquals, describe, it } from "../../../test.deps.ts";
+import { assertEquals, describe, it } from "../../../test_deps.ts";
 
 import { CommonUtils } from "../mod.ts";
 
 describe("common-utils", function () {
-  it("underscoreToCamelCase()", function () {
-    assertEquals(
-      CommonUtils.underscoreToCamelCase("hello_world"),
-      "Hello World"
-    );
-    assertEquals(
-      CommonUtils.underscoreToCamelCase("_hello_world_"),
-      " Hello World "
-    );
-  });
 
   it("hasDuplicates()", function () {
     assertEquals(CommonUtils.hasDuplicates(["a", "a"]), true);

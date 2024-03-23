@@ -4,7 +4,7 @@ import {
   beforeAll,
   describe,
   it
-} from "../../../test.deps.ts";
+} from "../../../test_deps.ts";
 
 import GitUtils from "../mod.ts";
 import { FileUtils } from "../../../mod.ts";

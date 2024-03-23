@@ -31,8 +31,8 @@
   },
   "tasks": {
     "test": "deno test --coverage=docs/reports/coverage --allow-all packages/common-utils/test packages/git-utils/test  packages/file-utils/test packages/logger-utils/test",
-    "coverage": "deno coverage docs/reports/coverage/ --lcov > docs/reports/coverage/lcov.info",
-    "coverage:report": "deno coverage docs/reports/coverage",
+    "coverage": "deno coverage docs/reports/coverage/ --include=packages --lcov > docs/reports/coverage/lcov.info",
+    "coverage:report": "deno coverage docs/reports/coverage --include=packages",
     "version:patch": "version patch",
     "version:minor": "version minor"
   },
