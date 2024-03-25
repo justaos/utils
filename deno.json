@@ -6,7 +6,6 @@
     "./email-utils": "./packages/email-utils/mod.ts",
     "./file-utils": "./packages/file-utils/mod.ts",
     "./logger-utils": "./packages/logger-utils/mod.ts",
-    "./git-utils": "./packages/git-utils/mod.ts",
     ".": "./mod.ts"
   },
   "lint": {
@@ -30,7 +29,7 @@
     }
   },
   "tasks": {
-    "test": "deno test --coverage=docs/reports/coverage --allow-all packages/common-utils/test packages/git-utils/test  packages/file-utils/test packages/logger-utils/test",
+    "test": "deno test --coverage=docs/reports/coverage --allow-all packages/common-utils/test packages/file-utils/test packages/logger-utils/test",
     "coverage": "deno coverage docs/reports/coverage/ --include=packages --lcov > docs/reports/coverage/lcov.info",
     "coverage:report": "deno coverage docs/reports/coverage --include=packages",
     "version:patch": "version patch",

@@ -10,20 +10,13 @@ jobs:
   build:
     if: ${{startsWith(github.event.head_commit.message, 'WIP') != true}}
 
-    services:
-      mongodb:
-        image: mongo:5.0.6
-        ports:
-          - 27017:27017
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        deno-version: [ 1.39.0 ]
+        deno-version: [ 1.41.1 ]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Use Deno ${{ matrix.deno-version }}
         uses: denolib/setup-deno@v2
         with:
@@ -40,3 +33,12 @@ jobs:
         with:
           files: ./docs/reports/coverage/lcov.info
 
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # The OIDC ID token is used for authentication with JSR.
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx jsr publish
