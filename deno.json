@@ -1,6 +1,6 @@
 {
   "name": "@justaos/utils",
-  "version": "1.13.0-pre.0",
+  "version": "2.0.0-pre.1",
   "exports": {
     "./common-utils": "./packages/common-utils/mod.ts",
     "./email-utils": "./packages/email-utils/mod.ts",
