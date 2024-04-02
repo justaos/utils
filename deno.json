@@ -24,8 +24,16 @@
       ]
     }
   },
+  "test": {
+    "include": [
+      "packages/common-utils/test",
+      "packages/file-utils/test",
+      "packages/email-utils/test",
+      "packages/logger-utils/test"
+    ]
+  },
   "tasks": {
-    "test": "deno test --allow-all packages/common-utils/test packages/file-utils/test packages/logger-utils/test",
+    "test": "deno test --allow-all",
     "test:email": "deno test --allow-all packages/email-utils/test",
     "coverage": "deno task test --coverage=docs/reports/coverage && deno coverage docs/reports/coverage/ --include=packages --lcov > docs/reports/coverage/lcov.info"
   },
