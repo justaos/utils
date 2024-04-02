@@ -1,30 +1,9 @@
 {
   "name": "@justaos/utils",
-  "private": false,
-  "description": "JUST A OS's ODM (Object Document Mapper) is built for NodeJS and provides transparent persistence for JavaScript objects to MongoDB database",
-  "keywords": [
-    "justaos",
-    "justaos odm",
-    "mongodb wrapper",
-    "object document mapper"
-  ],
-  "homepage": "https://justaos.com",
-  "bugs": {
-    "url": "https://github.com/justaos/odm/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/justaos/odm.git"
-  },
-  "author": "Shivaji Varma Pusapati Venkata <contact@shivajivarma.com> (https://shivajivarma.com)",
-  "license": "Apache-2.0",
-  "contributors": [],
   "scripts": {
     "test": "deno task test",
     "coverage": "deno task coverage",
-    "coverage:report": "deno task coverage:report",
-    "version:patch": "deno task version:patch",
-    "version:minor": "deno task version:minor"
+    "coverage:report": "deno task coverage:report"
   },
   "publishConfig": {
     "access": "public"

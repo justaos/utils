@@ -8,6 +8,13 @@
     "./logger-utils": "./packages/logger-utils/mod.ts",
     ".": "./mod.ts"
   },
+  "publish": {
+    "exclude": [
+      ".github/",
+      "test/",
+      ".run"
+    ]
+  },
   "lint": {
     "files": {
       "include": [
@@ -15,25 +22,12 @@
         "email-utils/src",
         "logger-utils/src"
       ]
-    },
-    "rules": {
-      "tags": [
-        "recommended"
-      ],
-      "include": [
-        "ban-untagged-todo"
-      ],
-      "exclude": [
-        "no-explicit-any"
-      ]
     }
   },
   "tasks": {
-    "test": "deno test --coverage=docs/reports/coverage --allow-all packages/common-utils/test packages/file-utils/test packages/logger-utils/test",
-    "coverage": "deno coverage docs/reports/coverage/ --include=packages --lcov > docs/reports/coverage/lcov.info",
-    "coverage:report": "deno coverage docs/reports/coverage --include=packages",
-    "version:patch": "version patch",
-    "version:minor": "version minor"
+    "test": "deno test --allow-all packages/common-utils/test packages/file-utils/test packages/logger-utils/test",
+    "test:email": "deno test --allow-all packages/email-utils/test",
+    "coverage": "deno task test --coverage=docs/reports/coverage && deno coverage docs/reports/coverage/ --include=packages --lcov > docs/reports/coverage/lcov.info"
   },
   "imports": {
     "@std/fmt": "jsr:@std/fmt@^0.218.2",

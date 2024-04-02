@@ -1,20 +1,25 @@
-import {
-  SendConfig,
-  SMTPClient,
-} from "https://deno.land/x/denomailer@1.2.0/mod.ts";
+import nodemailer from "npm:nodemailer";
+
+export type EmailSenderConfig = {
+  host: string;
+  port: number;
+  secure?: boolean;
+  auth: {
+    user: string;
+    pass: string;
+  };
+};
 
 export default class EmailSender {
-  #smtpClient: SMTPClient | undefined;
-  #config: any;
+  #smtpClient: any;
+  readonly #config: EmailSenderConfig;
 
   constructor(config: any) {
     this.#config = config;
   }
 
   connect() {
-    this.#smtpClient = new SMTPClient({
-      connection: this.#config,
-    });
+    this.#smtpClient = nodemailer.createTransport(this.#config);
   }
 
   async close() {
@@ -22,8 +27,8 @@ export default class EmailSender {
     this.#smtpClient = undefined;
   }
 
-  async send(config: SendConfig) {
-    await this.#getSmtpClient().send(config);
+  async send(config: any): Promise<any> {
+    return await this.#getSmtpClient().sendMail(config);
   }
 
   #getSmtpClient() {
