@@ -10,5 +10,6 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3"
-  }
+  },
+  "version": "1.13.0-pre.0"
 }
