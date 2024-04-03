@@ -345,7 +345,8 @@
     ],
     "packageJson": {
       "dependencies": [
-        "npm:bcryptjs@^2.4.3"
+        "npm:bcryptjs@^2.4.3",
+        "npm:nodemailer@^6.9.13"
       ]
     }
   }
