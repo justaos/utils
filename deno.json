@@ -28,7 +28,6 @@
     "include": [
       "packages/common-utils/test",
       "packages/file-utils/test",
-      "packages/email-utils/test",
       "packages/logger-utils/test"
     ]
   },

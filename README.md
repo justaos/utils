@@ -2,8 +2,9 @@
 
 Common utility functions used across projects.
 
-![GitHub release (with filter)](https://img.shields.io/github/v/release/justaos/utils?label=Release)
-[![Build](https://github.com/justaos/utils/workflows/Build/badge.svg)](https://github.com/justaos/utils/actions?workflow=Build)
+[![JSR Version](https://jsr.io/badges/@justaos/utils)](https://jsr.io/@utility/string)
+[![JSR Score](https://jsr.io/badges/@justaos/utils/score)](https://jsr.io/@utility/string/score)
+[![ci](https://github.com/justaos/utils/actions/workflows/test.yml/badge.svg)](https://github.com/utilityjs/string/actions/workflows/test.yml)
 [![Coverage](https://codecov.io/gh/justaos/utils/branch/main/graph/badge.svg?token=OzlniGFmNp)](https://codecov.io/gh/justaos/utils)
 [![License](https://img.shields.io/github/license/justaos/utils.svg?label=License)](/LICENSE)
 

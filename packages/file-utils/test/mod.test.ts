@@ -17,7 +17,7 @@ describe({
   sanitizeOps: false,
   fn: () => {
     beforeAll(async () => {
-      const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
+      const tempDir = `${TEST_RESOURCES_PATH}/.temp`;
       if (!FileUtils.existsSync(tempDir)) {
         console.log("SHIVAJI true")
         FileUtils.mkdirSync(tempDir, { recursive: true });
@@ -25,7 +25,7 @@ describe({
     });
 
     afterAll(async ()=> {
-      /*const tempDir = `${TEST_RESOURCES_PATH}/_temp_`;
+      /*const tempDir = `${TEST_RESOURCES_PATH}/.temp`;
       if (FileUtils.existsSync(tempDir)) {
         FileUtils.remove(tempDir, { recursive: true });
       }*/
@@ -50,22 +50,22 @@ describe({
     });
 
     it("#writeJsonFileSync()", function () {
-      FileUtils.writeJsonFileSync(`${TEST_RESOURCES_PATH}/_temp_/write.json`, {
+      FileUtils.writeJsonFileSync(`${TEST_RESOURCES_PATH}/.temp/write.json`, {
         title: "Write",
       });
       const obj = FileUtils.readJsonFileSync(
-        `${TEST_RESOURCES_PATH}/_temp_/write.json`,
+        `${TEST_RESOURCES_PATH}/.temp/write.json`,
       );
       assertEquals(obj.title, "Write");
     });
 
     it("#writeTextFileSync()", function () {
       FileUtils.writeTextFileSync(
-        `${TEST_RESOURCES_PATH}/_temp_/write.txt`,
+        `${TEST_RESOURCES_PATH}/.temp/write.txt`,
         "Write",
       );
       const str = FileUtils.readTextFileSync(
-        `${TEST_RESOURCES_PATH}/_temp_/write.txt`,
+        `${TEST_RESOURCES_PATH}/.temp/write.txt`,
       );
       assertEquals(str.toString(), "Write");
     });
@@ -79,7 +79,7 @@ describe({
     });
 
     it("#remove()", async () => {
-      const dir = `${TEST_RESOURCES_PATH}/_temp_`;
+      const dir = `${TEST_RESOURCES_PATH}/.temp`;
       FileUtils.removeSync(dir, { recursive: true });
       assertEquals(FileUtils.existsSync(dir), false);
     });
@@ -97,22 +97,22 @@ describe({
     });
 
     it("#unZipFromURL()", async () => {
-      FileUtils.mkdirSync(path.join(`${TEST_RESOURCES_PATH}/_temp_`), {
+      FileUtils.mkdirSync(path.join(`${TEST_RESOURCES_PATH}/.temp`), {
         recursive: true,
       });
       await FileUtils.unZipFromURL(
         new URL("./resources/compress.zip", import.meta.url),
-        path.join(`${TEST_RESOURCES_PATH}/_temp_/uncompressed`),
+        path.join(`${TEST_RESOURCES_PATH}/.temp/uncompressed`),
       );
       assertEquals(
         FileUtils.existsSync(
-          TEST_RESOURCES_PATH + "/_temp_/uncompressed/path/a.json",
+          TEST_RESOURCES_PATH + "/.temp/uncompressed/path/a.json",
         ),
         true,
       );
       assertEquals(
         FileUtils.existsSync(
-          TEST_RESOURCES_PATH + "/_temp_/uncompressed/sample.txt",
+          TEST_RESOURCES_PATH + "/.temp/uncompressed/sample.txt",
         ),
         true,
       );
