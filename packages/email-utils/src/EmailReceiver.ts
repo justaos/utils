@@ -1,8 +1,8 @@
-import Imap from "npm:imap@0.8.19";
+import Imap from "imap";
 
 import { Logger, LoggerUtils } from "../deps.ts";
-import * as mailparser from "npm:mailparser";
-import replyParser from "npm:node-email-reply-parser";
+import * as mailparser from "nodemailer";
+import replyParser from "node-email-reply-parser";
 
 export function parseReply(mailText: string): string {
   return replyParser(mailText, true);

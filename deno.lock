@@ -13,9 +13,12 @@
       "jsr:@std/uuid@^0.218.2": "jsr:@std/uuid@0.218.2",
       "npm:bcryptjs@2.4.3": "npm:bcryptjs@2.4.3",
       "npm:imap@0.8.19": "npm:imap@0.8.19",
+      "npm:imap@^0.8.19": "npm:imap@0.8.19",
       "npm:mailparser": "npm:mailparser@3.6.7",
       "npm:node-email-reply-parser": "npm:node-email-reply-parser@0.1.4",
-      "npm:nodemailer": "npm:nodemailer@6.9.9"
+      "npm:node-email-reply-parser@^0.1.4": "npm:node-email-reply-parser@0.1.4",
+      "npm:nodemailer": "npm:nodemailer@6.9.9",
+      "npm:nodemailer@^6.9.13": "npm:nodemailer@6.9.13"
     },
     "jsr": {
       "@std/assert@0.218.2": {
@@ -234,6 +237,10 @@
           "lodash": "lodash@4.17.21"
         }
       },
+      "nodemailer@6.9.13": {
+        "integrity": "sha512-7o38Yogx6krdoBf3jCAqnIN4oSQFx+fMa0I7dK1D+me9kBxx12D+/33wSb+fhOCtIxvYJ+4x4IMEhmhCKfAiOA==",
+        "dependencies": {}
+      },
       "nodemailer@6.9.9": {
         "integrity": "sha512-dexTll8zqQoVJEZPwQAKzxxtFn0qTnjdQTchoU6Re9BUUGBJiOy3YMn/0ShTW6J5M0dfQ1NeDeRTTl4oIWgQMA==",
         "dependencies": {}
@@ -341,7 +348,10 @@
       "jsr:@std/fs@^0.218.2",
       "jsr:@std/log@^0.218.2",
       "jsr:@std/path@^0.218.2",
-      "jsr:@std/uuid@^0.218.2"
+      "jsr:@std/uuid@^0.218.2",
+      "npm:imap@^0.8.19",
+      "npm:node-email-reply-parser@^0.1.4",
+      "npm:nodemailer@^6.9.13"
     ],
     "packageJson": {
       "dependencies": [

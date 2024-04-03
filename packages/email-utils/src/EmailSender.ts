@@ -1,4 +1,4 @@
-import nodemailer from "npm:nodemailer@6.9.13";
+import nodemailer from "nodemailer";
 
 export type EmailSenderConfig = {
   host: string;

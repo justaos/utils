@@ -41,6 +41,9 @@
     "@std/fs": "jsr:@std/fs@^0.218.2",
     "@std/log": "jsr:@std/log@^0.218.2",
     "@std/path": "jsr:@std/path@^0.218.2",
-    "@std/uuid": "jsr:@std/uuid@^0.218.2"
+    "@std/uuid": "jsr:@std/uuid@^0.218.2",
+    "imap": "npm:imap@^0.8.19",
+    "node-email-reply-parser": "npm:node-email-reply-parser@^0.1.4",
+    "nodemailer": "npm:nodemailer@^6.9.13"
   }
 }
